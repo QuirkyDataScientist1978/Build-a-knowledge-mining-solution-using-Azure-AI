@@ -337,7 +337,7 @@ At this point of the lab, we can try searching the index. Let's keep on using th
 
 ## Challenge
 
-Using [Azure Search Simple Query Syntax](https://docs.microsoft.com/en-us/rest/api/searchservice/simple-query-syntax-in-azure-search), try to create queries for the following situations:
+Using [Azure Search Simple Query Syntax](https://docs.microsoft.com/en-us/rest/api/searchservice/simple-query-syntax-in-azure-search) and [Lucene query syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax), try to create queries for the following situations:
 
 1. Return only the first document
 1. Search documents where words "Microsoft" and "Cloud" are up to 20 words distant one from the other
