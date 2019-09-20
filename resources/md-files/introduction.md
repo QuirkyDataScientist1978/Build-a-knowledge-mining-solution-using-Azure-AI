@@ -70,7 +70,6 @@
 
 ![Slide](../../resources/slides/35.png)
 
-
 ## Next Step
 
 [Solution architecture](./solution-architecture.md) or [Back to Labs Menu](../../README.md)

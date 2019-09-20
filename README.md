@@ -131,7 +131,17 @@ Full Course classroom training:  16 hours
 
 Contact us: <LearnAI@microsoft.com> and <http://aka.ms/LearnAI-GitHub>
 
-## Certifications
+## Useful Links - ACE Team Blog
+
++ [Using Azure-Functions-for-Python to create a Cognitive Search Filtering Custom Skill](https://techcommunity.microsoft.com/t5/AI-Customer-Engineering-Team/Using-Azure-Functions-for-Python-to-create-a-Cognitive-Search/ba-p/850106)
+
++ [Knowledge Mining Solution Accelerator (KMA v1.0)](https://techcommunity.microsoft.com/t5/AI-Customer-Engineering-Team/Announcement-Knowledge-Mining-Solution-Accelerator-KMA-v1-0/ba-p/805889)
+
++ [Mine knowledge from audio files with Microsoft AI](https://techcommunity.microsoft.com/t5/AI-Customer-Engineering-Team/Mine-knowledge-from-audio-files-with-Microsoft-AI/ba-p/781957)
+
++ [Start Today! Learn How to Create End-to-End Solutions with Microsoft AI](https://techcommunity.microsoft.com/t5/AI-Customer-Engineering-Team/Start-Today-Learn-How-to-Create-End-to-End-Solutions-with/ba-p/698422)
+
+## Useful Links - Certifications
 
 The LearnAI team had intense participation in the creation of the following new Microsoft certifications and its required tests:
 
@@ -149,6 +159,6 @@ The LearnAI team had intense participation in the creation of the following new 
 
 Click [here](https://azure.microsoft.com/en-us/support/legal/cognitive-services-compliance-and-privacy/) to learn how Microsoft Cognitive Services handle your data.
 
-### Q&A and Survey
+## Q&A and Survey
 
 Please help the LearnAI Team with [questions and feedback](./resources/md-files/qa-feedback-survey.md) about this training.

@@ -154,4 +154,5 @@ If you could not make it, [here](../resources/finished-solutions/finished-soluti
 
 ## Next Step
 
-+ [Custom Skills Lab](../labs/lab-05-custom-skills.md) or [Back to Read Me](../README.md)
+[Custom Skills Lab](../labs/lab-05-custom-skills.md) or [Back to Read Me](../README.md)
+  

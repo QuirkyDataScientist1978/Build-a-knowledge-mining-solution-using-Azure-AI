@@ -138,22 +138,20 @@ The service limits for this training are listed below. For the complete list, cl
 | Resource / Tier | Free | Basic | Standard S1 | Standard S2 | Standard S3 | Storage Optimized L1 | Standard Optimized L2
 |-------|----------|----------|----------|----------|----------|----------|----------|
 | SLA | No | Yes| Yes | Yes | Yes | Yes | Yes |
-| Storage per Partition | 50 MB | 2 GB | 25 GB | 100 GB | 200 GB | 1 TB | 2 TB | 
+| Storage per Partition | 50 MB | 2 GB | 25 GB | 100 GB | 200 GB | 1 TB | 2 TB |
 | Partitions | 1 | 1 | 12 | 12 | 12 | 12 | 12 |
 | Replicas | N/A | 3 | 12 | 12 | 12 | 12 | 12 |
-| Maximum Indexes | 3 | 15 | 50 | 200 | 200 or 1000/pertition in HD mode | 10 | 10 | 
+| Maximum Indexes | 3 | 15 | 50 | 200 | 200 or 1000/pertition in HD mode | 10 | 10 |
 | Maximum Indexers | 3 | 15 | 50 | 200 | 200 | 10 |10 |
 | Maximum fields per Index | 1000 | 100 | 1000 | 1000 | 1000 |1000 |1000 |
-| Total Documents | 10,000 | 1 million | 15 million per partition | 60 million per partition | 120 million per partition | TBD | TBD | 
-| Maximum Skillsets | 3 | 15 | 50 | 200 | 200 | 10 |10 | 
+| Total Documents | 10,000 | 1 million | 15 million per partition | 60 million per partition | 120 million per partition | TBD | TBD |
+| Maximum Skillsets | 3 | 15 | 50 | 200 | 200 | 10 |10 |
 | Maximum File size | 16 MB | 16 MB | 128 MB|  256 | 256 | 256 | 256 |
 | Maximum characters per File (blob) | 32,000 | 64,000 | 4 million |  4 million | 4 million | 4 million | 4 million |
 
 >Note 1: Azure Search also offers the **S3 High Density (S3 HD) tier**, engineered for specific workloads: multi-tenancy and large quantities of small indexes (one million documents per index, three thousand indexes per service). This tier does not provide the indexer feature, can't be used for Cognitive Search. On S3 HD, data ingestion must leverage the push approach, using API calls to push data from source to index.
-
->Note 2: Now in preview, two new service tiers for Storage Optimized workloads in Azure Search. These L-Series tiers offer significantly more storage at a reduced cost per terabyte when compared to the Standard tiers, 
-ideal for solutions with a large amount of index data and lower query volume throughout the day, 
-such as internal applications searching over large file repositories, archival scenarios when you have business data going back many years, or e-discovery applications.
+>
+>Note 2: Now in preview, two new service tiers for Storage Optimized workloads in Azure Search. These L-Series tiers offer significantly more storage at a reduced cost per terabyte when compared to the Standard tiers, ideal for solutions with a large amount of index data and lower query volume throughout the day, such as internal applications searching over large file repositories, archival scenarios when you have business data going back many years, or e-discovery applications.
 
 ### Typical Workflow
 
@@ -180,43 +178,43 @@ Using the Azure Search service created in the previous lab, you will use the "Im
 
 ![Import Data Graphic](../resources/images/lab-azure-search/import-data.png)
 
-1.  Choose the **Azure Blob Storage** Data Source and name it as `lab1data`. 
+1. Choose the **Azure Blob Storage** Data Source and name it as `lab1data`
 
-1.  Choose the **Content and Metadata** option, we want to index not only the files properties but also their content. 
+1. Choose the **Content and Metadata** option, we want to index not only the files properties but also their content
 
-1.  Choose the **Default** parsing mode, since the dataset also has pdfs. The **Text** option has performance advantage, but that's not what we want because of the characteristics of our dataset. 
+1. Choose the **Default** parsing mode, since the dataset also has pdfs. The **Text** option has performance advantage, but that's not what we want because of the characteristics of our dataset
 
-1.  In the **Connection string** add the connection string collected in the previous lab. 
+1. In the **Connection string** add the connection string collected in the previous lab
 
-1.  In the **Container name**, type **basicdemo**. You can skip Blob Folder and Description. 
+1. In the **Container name**, type **basicdemo**. You can skip Blob Folder and Description
 
-1.  Click **Next: Add cognitive search (Optional)**.  After you click the blue button, you will wait a few seconds because Azure Search will be detecting (sampling) the schema and the metadata of the dataset.
+1. Click **Next: Add cognitive search (Optional)**.  After you click the blue button, you will wait a few seconds because Azure Search will be detecting (sampling) the schema and the metadata of the dataset
 
 ![Data Source Graphic](../resources/images/lab-azure-search/data-source-2.png)
 
 ### Step 2 - Attach Cognitive Services
 
-1.  Click on the **Attach Cognitive Services** link and use the Cognitive Services account you created in the last step of the [previous lab](../labs/lab-01-environment-creation.md). 
+1. Click on the **Attach Cognitive Services** link and use the Cognitive Services account you created in the last step of the [previous lab](../labs/lab-01-environment-creation.md)
 
-> **Note** If you don't see it listed for you, click on **Create new Cognitive Services resource** and follow the tutorial. It will open the Azure Portal in a new browser window. After you have finished, return to the previous window where we are using the Azure Search wizard to import data. 
+> **Note** If you don't see it listed for you, click on **Create new Cognitive Services resource** and follow the tutorial. It will open the Azure Portal in a new browser window. After you have finished, return to the previous window where we are using the Azure Search wizard to import data.
 
-1.  Click on **Add Enrichments**.
+1. Click on **Add Enrichments**
 
-1.  Name your skillset as `myportalskillset` 
+1. Name your skillset as `myportalskillset`
 
-1.  Click on the enable OCR checkbox.  This will alow us to submit both content and image text to the cognitive skills
+1. Click on the enable OCR checkbox.  This will alow us to submit both content and image text to the cognitive skills
 
-1.  Ensure `Source data field` is set to **merged_content**
+1. Ensure `Source data field` is set to **merged_content**
 
-1.  Check all the skill checkboxes
+1. Check all the skill checkboxes
 
-1.  Click **Save enrichments to a knowledge store** link, copy the storage account connection string into the textbox.
+1. Click **Save enrichments to a knowledge store** link, copy the storage account connection string into the textbox.
 
-1.  Check all the checkboxes
+1. Check all the checkboxes
 
-1.  For the container name, type **projections**
+1. For the container name, type **projections**
 
-1.  Click the **Next: Customize target index** button.
+1. Click the **Next: Customize target index** button
 
 1. In the index tab, we will define the index structure and features as follows:
 
@@ -224,60 +222,60 @@ Using the Azure Search service created in the previous lab, you will use the "Im
 
 1. **Keep `metadata_storage_path` as the key.** This is a unique identifier for each file of the data source. It is a good idea to use the physical path of file, since it is unique by design. Since our dataset is on blob storage, the content of this field is the file URL, that's why it is unique by design. If you check the other options, you will see that metadata_storage_path is only one field that can guarantee uniqueness. As of December 2018, the key maximum size is 1024 characters. This limit won't be a problem for this training, but the workaround is to reduce the file name length and also the path. This limit is currently under analysis of the product team.
 
-1.   Name the **Suggester** as `myportalsuggester` and set the **Search Mode** to **"analyzingInfixMatching".** The Suggester feature provides type-ahead suggestions, as you can see in web search engines like [Bing](www.bing.com).
+1. Name the **Suggester** as `myportalsuggester` and set the **Search Mode** to **"analyzingInfixMatching".** The Suggester feature provides type-ahead suggestions, as you can see in web search engines like [Bing](www.bing.com).
 
-  + Notice the 3 types of fields available:
-    + content: all text from the documents that exists when they are cracked (opened) by Azure Search
-    + metadata*: all physical information Azure Search can retrieve from the filesystem, or database
-    + AI: created in the Cognitive Search blade of the Wizard
++ Notice the 3 types of fields available:
+  + content: all text from the documents that exists when they are cracked (opened) by Azure Search
+  + metadata*: all physical information Azure Search can retrieve from the filesystem, or database
+  + AI: created in the Cognitive Search blade of the Wizard
 
-  + This are the options available:
++ This are the options available:
 
-    + **Retrievable:** Fields returned to the application by default. It is possible to specify a field, by if it is not retrievable, there will be no data for it. Please notice the datatypes: strings, Integer, Datetime, and collection of strings, as an array that allow you the manipulate individual values. In a parallel with the SQL language, this is the `SELECT clause`
+  + **Retrievable:** Fields returned to the application by default. It is possible to specify a field, by if it is not retrievable, there will be no data for it. Please notice the datatypes: strings, Integer, Datetime, and collection of strings, as an array that allow you the manipulate individual values. In a parallel with the SQL language, this is the `SELECT clause`
 
-    + **Filterable:** For filtering on these fields. In a parallel with the SQL language, this is the `WHERE clause`
+  + **Filterable:** For filtering on these fields. In a parallel with the SQL language, this is the `WHERE clause`
 
-    + **Sortable:** For sorting on these fields. In a parallel with the SQL language, this is the `ORDER BY clause`
+  + **Sortable:** For sorting on these fields. In a parallel with the SQL language, this is the `ORDER BY clause`
 
-    + **Facetable:** For grouping results on these fields. In a parallel with the SQL language, this is the `GROUP BY clause`
+  + **Facetable:** For grouping results on these fields. In a parallel with the SQL language, this is the `GROUP BY clause`
 
-    + **Searchable** For searching on these fields. In a parallel with the SQL language, this is the `HAVING clause`
+  + **Searchable** For searching on these fields. In a parallel with the SQL language, this is the `HAVING clause`
   
-    + **Analyzer:** For dictionary matching. The Analyzer takes the terms a user enters and works to find the best matching terms in the Index. Azure Search includes analyzers that are used in technologies like Bing and Office that have deep understanding of 56 languages. For the full list, click [here](https://docs.microsoft.com/en-us/rest/api/searchservice/language-support). It is a good idea to add analyzer for the **searchable** fields, for a better user experience
+  + **Analyzer:** For dictionary matching. The Analyzer takes the terms a user enters and works to find the best matching terms in the Index. Azure Search includes analyzers that are used in technologies like Bing and Office that have deep understanding of 56 languages. For the full list, click [here](https://docs.microsoft.com/en-us/rest/api/searchservice/language-support). It is a good idea to add analyzer for the **searchable** fields, for a better user experience
 
-    + **Suggester:** For suggestions while the user is typing. It is a good idea to add suggester for string **filterable** fields, for a better user experience
+  + **Suggester:** For suggestions while the user is typing. It is a good idea to add suggester for string **filterable** fields, for a better user experience
 
-As you can see, not all fields should be retrievable or filterable and so on. We are setting all fields as retrievable so you can analyze what they mean, at the end of this lab. Also, every single click on those checkboxes represent more processing (and time) required to ingest data. And before any best practice, there are the business rules. 
+As you can see, not all fields should be retrievable or filterable and so on. We are setting all fields as retrievable so you can analyze what they mean, at the end of this lab. Also, every single click on those checkboxes represent more processing (and time) required to ingest data. And before any best practice, there are the business rules.
 
-1.  Set your configuration like the image below, click the blue **Next: Create an indexer** button. A validation will be made.
+1. Set your configuration like the image below, click the blue **Next: Create an indexer** button. A validation will be made.
 
 ![Index Configuration](../resources/images/lab-azure-search/index-settings.png)
 
 > **Note** Using the Azure portal you can't map the source fields more than once (i.e. to change you have to start over). In the next labs, you will create the index and the indexer using API calls, and that **does** allow you to do it. It is also important to realize that you only have the file's metadata to work with. In the next labs you will use Cognitive Search to create metadata from your data, and, as a result, your index will be completely different.
 
-1.  Name your indexer as `myportalindexer`. The indexer is the job that connects the data source, the index and the schedule.
+1. Name your indexer as `myportalindexer`. The indexer is the job that connects the data source, the index and the schedule.
 
-1.  Set the schedule as **once**. 
+1. Set the schedule as **once**
 
-1.  Click the **Advanced Options** link and:
+1. Click the **Advanced Options** link and:
 
-1.  Set **Max failed items** to `-1`, we don't want the indexer to stop processing a document even when any cognitive skill has an error
+1. Set **Max failed items** to `-1`, we don't want the indexer to stop processing a document even when any cognitive skill has an error
 
-1.  Set **Max failed items per batch** to `-1`, we don't want the indexer batch job to stop at any reason
+1. Set **Max failed items per batch** to `-1`, we don't want the indexer batch job to stop at any reason
 
-1.  Set **Data to extract** to `Content and metadata`, since we are using both as you can see above
+1. Set **Data to extract** to `Content and metadata`, since we are using both as you can see above
 
-1.  Set **Parsing mode** to Default, we have both text and image skills
+1. Set **Parsing mode** to Default, we have both text and image skills
 
-1.  Click the blue **Submit** button, and you will be redirected to the overview tab, where now you can see 1 index, 1 indexer and 1 data source (you may have to refresh your page).
+1. Click the blue **Submit** button, and you will be redirected to the overview tab, where now you can see 1 index, 1 indexer and 1 data source (you may have to refresh your page).
 
-1.  Click on the Indexes, Indexers, Data sources, and Skillsets tabs to see the objects you just created using the portal. In the next lab, you will learn how to create them with REST API calls
+1. Click on the Indexes, Indexers, Data sources, and Skillsets tabs to see the objects you just created using the portal. In the next lab, you will learn how to create them with REST API calls
 
-1.  Click the **Indexers** link and check the status of your indexer. It should be **In progress**. Wait until you get the **Warning** status, it is expected to have some warnings. Please notice that:
+1. Click the **Indexers** link and check the status of your indexer. It should be **In progress**. Wait until you get the **Warning** status, it is expected to have some warnings. Please notice that:
 
-  - You may need to click the `Refresh` link in the top of the **Overview** tab
-  - If received an error, review and validate your followed the lab steps correctly
-  - If your indexer has a status showing that is not running or have never ran before, click on the indexer and run it manually click clicking **Run**
++ You may need to click the `Refresh` link in the top of the **Overview** tab
++ If received an error, review and validate your followed the lab steps correctly
++ If your indexer has a status showing that is not running or have never ran before, click on the indexer and run it manually click clicking **Run**
 
 ![Overview tab](../resources/images/lab-azure-search/redirect.png)
 
@@ -362,5 +360,4 @@ The links below will work only with the API, which you will learn in the next la
 
 ## Next Step
 
-[Text Skills Lab](../labs/lab-03-text-skills.md) or
-[Back to Read Me](../README.md)
+[Text Skills Lab](../labs/lab-03-text-skills.md) or [Back to Read Me](../README.md)

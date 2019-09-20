@@ -11,6 +11,7 @@ DELETE https://[your-service-name].search.windows.net/skillsets/demoskillset?api
 Content-Type: application/json
 api-key: [api-key]
 ```
+
 ## Delete Index
 
 ```http
@@ -354,5 +355,4 @@ $select=blob_uri,needsModeration,content&$filter=needsModeration eq true
 
 ## Next Step
 
-[Bots Lab](../../labs/lab-06-bot-business-documents.md) or
-[Back to Read Me](../../README.md)
+[Bots Lab](../../labs/lab-06-bot-business-documents.md) or [Back to Read Me](../../README.md)

@@ -20,5 +20,4 @@ The commands below should be types in the Search Explorer **Query string** bar. 
 
 ## Next Step
 
-[Text Skills Lab](../../labs/lab-03-text-skills.md) or
-[Back to Read Me](../../README.md)
+[Text Skills Lab](../../labs/lab-03-text-skills.md) or [Back to Read Me](../../README.md)

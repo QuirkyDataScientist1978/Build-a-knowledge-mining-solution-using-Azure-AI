@@ -317,5 +317,4 @@ Content-Type: application/json
 
 ## Next Step
 
-[Custom Skills Lab](../../labs/lab-05-custom-skills.md) or
-[Back to Read Me](../../README.md)
+[Custom Skills Lab](../../labs/lab-05-custom-skills.md) or [Back to Read Me](../../README.md)

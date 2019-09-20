@@ -21,8 +21,7 @@ Let's start with an overview about Bots.
 
 This lab's bot uses the Microsoft Bot Framework (V4), an open-source SDK available in Node.js, C#, Python and Java.
 
-You can use the Microsoft Bot Framework to create a single code base to deploy with Azure Bot Service, which allows you to surface your bot on many 
-channels (Skype, Cortana, Facebook, etc). The key concepts to know for this lab includes:
+You can use the Microsoft Bot Framework to create a single code base to deploy with Azure Bot Service, which allows you to surface your bot on many channels (Skype, Cortana, Facebook, etc). The key concepts to know for this lab includes:
 
 + **Adapter:** The Bot orchestrator, routing incoming and outgoing communication and authentication. For any interaction, it creates a `TurnContext` object and passes it to the bot application logic
 
@@ -48,15 +47,15 @@ Using the image below, check how all those concepts are integrated in the intern
 
 Each bot is different, but there are some common patterns, workflows, and technologies to be aware of. Especially for a bot to serve enterprise workloads, there are many design considerations beyond just the core functionality.
 
-[This](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/conversational-bot) reference architecture describes how to build an enterprise-grade conversational bot (chatbot) using the Azure Bot Framework. 
+[This](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/conversational-bot) reference architecture describes how to build an enterprise-grade conversational bot (chatbot) using the Azure Bot Framework.
 
 ## Responsible Bots
 
-In order for people and society to realize the full potential of bots, they need to be designed in such a way that they earn the trust of others. [These](https://www.microsoft.com/en-us/research/publication/responsible-bots/) guidelines are aimed at helping you to design a bot that builds trust in the company and service that the bot represents. 
+In order for people and society to realize the full potential of bots, they need to be designed in such a way that they earn the trust of others. [These](https://www.microsoft.com/en-us/research/publication/responsible-bots/) guidelines are aimed at helping you to design a bot that builds trust in the company and service that the bot represents.
 
 ## Step 1 - Download and install the Bot Framework Emulator
 
-The Bot Framework Emulator helps you run your bots locally for testing and debugging purposes. Download the emulator by going to [this page](https://github.com/Microsoft/BotFramework-Emulator/releases) and downloading the most recent version of the emulator that has the tag "Latest Release" (select the ".exe" file, if you are using windows). We suggest release 4.5.2 or newer. 
+The Bot Framework Emulator helps you run your bots locally for testing and debugging purposes. Download the emulator by going to [this page](https://github.com/Microsoft/BotFramework-Emulator/releases) and downloading the most recent version of the emulator that has the tag "Latest Release" (select the ".exe" file, if you are using windows). We suggest release 4.5.2 or newer.
 
 > **Note** The instructions for the rest of the labs will assume you've downloaded the V4 Emulator (as opposed to the V3 Emulator).
 
@@ -66,11 +65,11 @@ The emulator installs to `c:\Users\`_your-username_`\AppData\Local\botframework\
 
 As part of the environment creation lab, you should have cloned the repository to your local environment. If you have not, now is a good time to go back and do so.  
 
-1.  Under **resources > code-bot**, you should be able to locate a "Microsoft Visual Studio Solution File" called **CognitiveSearchBot.sln**. Double-click on it to open the solution in Visual Studio.  
+1. Under **resources > code-bot**, you should be able to locate a "Microsoft Visual Studio Solution File" called **CognitiveSearchBot.sln**. Double-click on it to open the solution in Visual Studio.  
 
-1.  Once the solution is open, right-click on the "Solution 'CognitiveSearchBot'" in the Solution Explorer (from now on we'll just refer to this as "the solution") and select **Rebuild** to pull down all the dependencies required.  
+1. Once the solution is open, right-click on the "Solution 'CognitiveSearchBot'" in the Solution Explorer (from now on we'll just refer to this as "the solution") and select **Rebuild** to pull down all the dependencies required.  
 
-1.  Right-click on the solution and select "Manage NuGet Packages for Solution...". Under "Installed", you should find "Microsoft.Azure.Search" listed. There's no action here, but you should know that this package contains libraries that make it very easy for us to call the Azure Cognitive Search API and process the results.
+1. Right-click on the solution and select "Manage NuGet Packages for Solution...". Under "Installed", you should find "Microsoft.Azure.Search" listed. There's no action here, but you should know that this package contains libraries that make it very easy for us to call the Azure Cognitive Search API and process the results.
 
 ### Step 2.1 - Understanding the Code
 
@@ -92,45 +91,45 @@ There is a lot of "stuff" in this solution. If you've worked with bots before, y
 
 ### Step 2.2 - Changing the code
 
-1.  Open the **Constants.cs** file. 
+1. Open the **Constants.cs** file.
 
-1.  Edit the string values to match your Azure environment resources. Since you've created and tested the index in Postman, you should have these readily available. If not, you can open the Azure portal and locate your Azure Search service to get the needed information. 
+1. Edit the string values to match your Azure environment resources. Since you've created and tested the index in Postman, you should have these readily available. If not, you can open the Azure portal and locate your Azure Search service to get the needed information.
 
-    +   Search service name
-    +   search service key
-    +   Index name (**demoindex**). 
++ Search service name
++ Search service key
++ Index name (**demoindex**)
 
-1.  Save the file
+1. Save the file
 
 >**Note** The Bot code has many references to the index fields. If you did not named the content moderator field as **needsModeration** or the OCR field as **myOcrText**, you will need to change the code to use your fields names. The files to be changed are: /Dialogs/ModeratedContentSearchDialog.cs and /Models/SearchHit.cs .
 
 ## Step 3 - Interacting with your Cognitive Search Bot
 
-1.  In Visual Studio, press **F5** to build and run the bot locally.  
+1. In Visual Studio, press **F5** to build and run the bot locally.  
 
-1.  Open the Bot Emulator if it is not open already. 
+1. Open the Bot Emulator if it is not open already.
 
-1.  Select the button **Open Bot** from the Welcome page. 
+1. Select the button **Open Bot** from the Welcome page.
 
-1.  Click **Browse**, then navigate to the **BotConfiguration.bot** file in the **resources > code-bot** folder.
+1. Click **Browse**, then navigate to the **BotConfiguration.bot** file in the **resources > code-bot** folder.
 
-1.  Click **Open**, then click **Connect**.  This should open a chat window with your bot. You can start by saying some sort of greeting ("hi", "hello", "whats up bot", etc.). The bot should respond with a greeting, followed by the help message that says what it can do. 
+1. Click **Open**, then click **Connect**.  This should open a chat window with your bot. You can start by saying some sort of greeting ("hi", "hello", "whats up bot", etc.). The bot should respond with a greeting, followed by the help message that says what it can do.
 
-1.  Since really all it can do is search, enter **search** to trigger the search dialog. There is also a menu to avoid typing, it comes up right after the greeting. You can also ask for help, but the answer will be the same you had before.
+1. Since really all it can do is search, enter **search** to trigger the search dialog. There is also a menu to avoid typing, it comes up right after the greeting. You can also ask for help, but the answer will be the same you had before.
 
 ![Greet Bot](../resources/images/lab-bot/emulator-running.png)
 
-1.  Submit some search requests. Try searching for various items and inspecting your results. Try to search using both the menu button and typing search + enter + the term you want to search for.  If you're unsure what to search for, here are a few suggestions: 
+1. Submit some search requests. Try searching for various items and inspecting your results. Try to search using both the menu button and typing search + enter + the term you want to search for.  If you're unsure what to search for, here are a few suggestions:
 
-+   "satya nadella"
-+   "financial reporting"
-+   "security issues"
-+   "Azure"
-+   "cognitive services"
-+   "cloud"
-+   "sql server"
-+   "learnai"
-+   "reports"
++ "satya nadella"
++ "financial reporting"
++ "security issues"
++ "Azure"
++ "cognitive services"
++ "cloud"
++ "sql server"
++ "learnai"
++ "reports"
 
 ## Step 4 - Using break points to understand the search flow
 
@@ -138,13 +137,13 @@ If you want to dive slightly deeper into calling the Azure Cognitive Search API 
 
 First, stop your bot (by hitting the stop button in Visual Studio).  
 
-1.  Open the **SearchDialog.cs** file. First, note that on line 3 there is a reference for CognitiveSearchBot, that is using the Azure Search SDK (file **SearchDialogBase.cs**). Remember, this is crucial to running the commands you are about to step through.  
+1. Open the **SearchDialog.cs** file. First, note that on line 3 there is a reference for CognitiveSearchBot, that is using the Azure Search SDK (file **SearchDialogBase.cs**). Remember, this is crucial to running the commands you are about to step through.  
 
-1.  Next, scroll down to where the search related tasks are located. Place a break point on line 59, where there is the command `await ExecuteSearchAsync(stepContext.Context, searchText);`, by clicking in the grey area left of the numbers. You should see a red dot next to the break point lines, as shown below:  
+1. Next, scroll down to where the search related tasks are located. Place a break point on line 59, where there is the command `await ExecuteSearchAsync(stepContext.Context, searchText);`, by clicking in the grey area left of the numbers. You should see a red dot next to the break point lines, as shown below:  
 
 ![Set break points](../resources/images/lab-bot/setbreak.png)
 
-1.  Next, run the bot (select `F5`) and on the Bot Emulator, search for something. Anything works. Visual Studio will likely start blinking requesting your return. In Visual Studio, you should see the line about to be executed highlighted. Select `F11` repeatedly to step through what is happening as the search is processed. In the bottom box within Visual Studio, you should see "Locals". These values can be expanded and inspected. For example, when you should be able to see the search you just did.
+1. Next, run the bot (select `F5`) and on the Bot Emulator, search for something. Anything works. Visual Studio will likely start blinking requesting your return. In Visual Studio, you should see the line about to be executed highlighted. Select `F11` repeatedly to step through what is happening as the search is processed. In the bottom box within Visual Studio, you should see "Locals". These values can be expanded and inspected. For example, when you should be able to see the search you just did.
 
 ![Examine hit locals](../resources/images/lab-bot/locals.png)
 
@@ -154,14 +153,14 @@ Using break points for debugging and seeing how calls are made and processed is 
 
 ## Step 5 - Deploy your Bot
 
-Follow [this](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-deploy-az-cli?view=azure-bot-service-4.0) tutorial and deploy your Bot to Azure. 
+Follow [this](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-deploy-az-cli?view=azure-bot-service-4.0) tutorial and deploy your Bot to Azure.
 
 After the deployment, execute the following activities:
 
 + Test your bot using the Azure Portal
-+ Test your bot using the Bot Emulator, creating a new endpoint. Open this [link](https://github.com/Microsoft/BotFramework-Emulator/wiki/Getting-Started) 
++ Test your bot using the Bot Emulator, creating a new endpoint. Open this [link](https://github.com/Microsoft/BotFramework-Emulator/wiki/Getting-Started)
 and follow the instructions to **Connecting to bots hosted remotely**
-+ Optional: You can also try to [add your bot to Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-overview).
++ Optional: You can also try to [add your bot to Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-overview)
 
 ## Cleaning your environment
 
@@ -169,5 +168,4 @@ You have completed all of the hands-on portions of the course. We recommend dele
 
 ## Next Step
 
-[Final Case](../labs/lab-final-case.md) or
-[Back to Read Me](../README.md)
+[Final Case](../labs/lab-final-case.md) or [Back to Read Me](../README.md)
