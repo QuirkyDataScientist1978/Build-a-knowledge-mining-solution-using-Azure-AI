@@ -99,12 +99,6 @@ This course, in its full form, is designed to be taught in-person but you can al
 
 Full Course classroom training:  16 hours
 
-### Related LearnAI Courses
-
-[Azure Cognitive Services Bootcamp](https://github.com/Azure/LearnAI-Bootcamp)  
-[Cognitive Search Workshop](https://azure.github.io/LearnAI-Cognitive-Search/)  
-[Designing and Architecting Intelligent Agents](https://azure.github.io/LearnAI-DesigningandArchitectingIntelligentAgents/)  
-
 ### Course Modules
 
 1. [Introduction](./resources/md-files/introduction.md) – **Presentation** overview of Azure Search, Cognitive Search, business scenarios and industry specific applications.
@@ -125,7 +119,7 @@ Full Course classroom training:  16 hours
 
 9. [Lab 7](./labs/lab-final-case.md) - **Architecture Design Session + Hackathon**
 
-> **Note**: Once you've completed the labs, we recommend deleting the resource group (and all the resources in it) to avoid incurring extra charges.
+> **Note**: Once you've completed the labs, we recommend deleting the resource group (and all the resources in it) to avoid incurring extra charges, unless you want to use this solution as a tool for demos and POCs.
 
 ## Contact
 
