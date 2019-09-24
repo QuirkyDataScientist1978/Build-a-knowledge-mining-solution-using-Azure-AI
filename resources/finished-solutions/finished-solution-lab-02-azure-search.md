@@ -1,4 +1,4 @@
-# Finished Solution - Custom Skills Lab
+# Finished Solution - Azure Search Lab
 
 Hello!
 

@@ -4,9 +4,9 @@ In this lab, you will create an Azure Search service and a storage account. We r
 
 ## Step 1 - Clone the Repo
 
-Cloning the repo will download all the training materials to your computer, including the dataset, the slides and the code for the Bot project. **The cloning of the repository will use close to 110 MB in total**.
+Cloning the repo will download all the training materials to your computer, including the dataset, the slides and the code for the Bot project. **The cloning of the repository will use close to 185 MB in total**. If you have any git tool in your computer, you can run `git clone https://github.com/Azure/LearnAI-KnowledgeMiningBootcamp.git` in your command prompt. Or simply follow the tasks below:
 
-### Task 1: Download GitHub resources
+### Tasks - cloning the repo using zip file download
 
 1. Open a browser window to the GitHub repository (<https://github.com/Azure/LearnAI-KnowledgeMiningBootcamp>).
 
@@ -66,39 +66,43 @@ The enrichment pipeline pulls from Azure data sources. Source data must originat
 
 1. From the resource group, click **+Add**.  Search for **storage account**, select it, then click **Create**
 
-2. Ensure your newly created resource group is selected.  Type a unique name for your storage account, such as **INITkmbstorage**
+1. Ensure your newly created resource group is selected. This resource group should be used for all services of this training, not only for this storage account. Use a name that allows you to easily identify these resources in the future, such as  **kmb-rg**
 
-3. Select the same location as your Azure Search resource.  This will help to avoid latency
+1. Type a unique name for your storage account, such as **kmbstorage**. This name can contain only lowercase letters and numbers. It also must have between 3 and 24 characters
 
-4. For performance, select **Standard**
+1. Select the same location as your Azure Search resource.  This will help to avoid latency
 
-5. For **account kind**, select **StorageV2**
+1. For performance, select **Standard**
 
-6. For replication, select **Locally-redundant storage LRS**
+1. For **account kind**, select **StorageV2**
 
-7. Click **Review + create**, then click **Create**
+1. For replication, select **Locally-redundant storage LRS**
 
-8. From the storage account **Overview** tab, click the link to **Blobs**
+1. Click **Review + create**, then click **Create**
 
-9. Click the **+Container** link. For the name type `projections`
+1. From the storage account **Overview** tab, click the link to **Blobs**. Now you will create 2 containers.
 
-10. Select **Container** for Access Type.
+1. Click the **+Container** link. For the name type `projections`
 
-11. Click the **+Container** link. For the name type `basicdemo`
+1. Select **Container** for Access Type.
 
-12. Select **Container** for Access Type.
+1. Click the **+Container** link. For the name type `basicdemo`
 
-13. Select the new container, then click **Upload**.  Browse to the **\resources\dataset** cloned github folder and select all the files, then click **Open**
+1. Select **Container** for Access Type.
 
-14. Click **Upload**, wait for all the files to upload.
+1. Select the new container, then click **Upload**.  Browse to the **\resources\dataset** cloned github folder and select all the files, then click **Open**
+
+1. Click **Upload**, wait for all the files to upload.
 
  > **Note** You can also use the [Azure Storage Explorer](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-storage-explorer) to upload files. If you use the Storage Explorer, be careful not to create another folder level. This training is created with the assumption that all of the data is located in the root folder of the container.
 
-1. Ensure that 21 files were uploaded to the **basicdemo** container.
+After the upload, please follow these 3 steps:
 
-1. Navigate back to the storage account blade, under **Settings**, click **Access keys**.
+- Ensure that 21 files were uploaded to the **basicdemo** container
 
-1. Copy the **key1** **Connection string** by clicking the copy button.  Save the key to notepad or similar text editor.
+- Navigate back to the storage account blade, under **Settings**, click **Access keys**.
+
+- Copy the **key1** **Connection string** by clicking the copy button.  Save the key to notepad or similar text editor.
 
 ## Step 4 - Create the Cognitive Services Account
 
@@ -106,7 +110,7 @@ A Cognitive Services resource is needed in order to enrich more than 20 document
 
 1. From the resource group, click **+Add**.  Search for **cognitive services**, select it, then click **Create**
 
-1. For the name, type **INIT-cogs**
+1. For the name, type **kmb-cog-serv**
 
 1. For the location, select the same resource group as your search and storage account
 
