@@ -32,18 +32,21 @@ Cloning the repo will download all the training materials to your computer, incl
 
 > **Note** The name of the service in the screenshots of this lab won't be available, you must create your own service name.
 
-1. For **Location**, choose one of the regions below, Cognitive Search is not available in all Azure regions.
+1. For **Location**, choose one of [these](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=search) regions. Suggested regions are:
 
 - West Central US
 - South Central US
+- North Central US
 - East US
 - East US 2
+- West US
 - West US 2
 - Canada Central
 - West Europe
 - UK South
 - North Europe
 - Brazil South
+- East Asia
 - Southeast Asia
 - Central India
 - Australia East

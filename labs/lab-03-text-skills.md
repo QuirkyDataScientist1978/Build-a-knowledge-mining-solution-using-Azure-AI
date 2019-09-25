@@ -35,7 +35,7 @@ Now that your services and source files are prepared, you can start assembling t
 For this tutorial, you will use Postman to call Azure Search service APIs. Using the **POST** method and **Header** of the Postman application, you will provide the service name and the api-key you used while creating the Azure Search service, and you will define the content-type as JSON. This information is summarized as follows:
 
 ```http
-POST https://[your-service-name].search.windows.net/datasources?api-version=2019-05-06
+POST https://[your-service-name].search.windows.net/datasources?api-version=2019-05-06-Preview
 Content-Type: application/json
 api-key: [admin key]
 ```
@@ -96,7 +96,7 @@ If you are not so familiar with Postman, perform the following detailed steps to
 
 1. Switch back to the Azure portal. Confirm the data source was created in Azure Search. On the **Search service dashboard page**, verify the **Data Sources** link has a new item. You might need to wait a few minutes for the portal page to refresh.
 
-> **Tip** If you got a 403 or 404 error, check the request construction: `api-version=2019-05-06-Preview` should be on the endpoint, `api-key` should be in the Header after `Content-Type`, and its value must be valid for a search service. You can reuse the header for the remaining steps in this lab. Verify that the search service is running in one of the supported locations providing the preview feature: South Central US or West Europe.
+> **Tip** If you got a 403 or 404 error, check the request construction: `api-version=2019-05-06` should be on the endpoint, `api-key` should be in the Header after `Content-Type`, and its value must be valid for a search service. You can reuse the header for the remaining steps in this lab.
 
 ## Step 2 - Create a skillset
 
@@ -459,6 +459,10 @@ Submit the second query below, to verify the metadata created with AI. Please no
 >**Note** As you can see, it is possible to return multiple fields via `$select` using a comma-delimited list.
 
 You can use GET or POST, depending on query string complexity and length. For more information, see [Query using the REST API](https://docs.microsoft.com/azure/search/search-query-rest-api).
+
+## Challenge - Knowledge Store
+
+You can try to create a knwoledge store programmatically, using [this](https://docs.microsoft.com/en-us/azure/search/knowledge-store-howto) tutorial. Create a new blob container, don't use that one created in the previous lab, so you can keep both and compare the results.
 
 ## Next Step
 
