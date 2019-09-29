@@ -50,13 +50,13 @@ In the [Fifth Lab](../../labs/lab-05-custom-skills.md) you will learn how to cre
 
 In the [Sixth Lab](../../labs/lab-06-bot-business-documents.md) you will learn how to use a Bot to interact with the Azure Search Index, the Business Documents Bot. This lab uses the Bot Emulator and Visual Studio.
 
-In the [Seventh Lab](../../labs/lab-final-case.md) you are invited to, based on what you have learned, create the architecture of a Knowledge Mining solution for another use case.
+In the [Seventh Lab](../../labs/lab-final-case.md) you are invited to, based on what you have learned, create the architecture of a Knowledge Mining solution for another use case. There is also a Hackathon that will challenge your Cognitive Search learnings. A new dataset is provided.
 
 ## Dataset
 
 We will provide a sample dataset that contains documents with multiple languages and formats including HTML, doc, pdf, ppt, png and jpg. They were selected for a better learning experience, showcasing the technology capabilities.
 
-The dataset has 21 files and 15 MBs. It includes public Microsoft business documents. There is a document in spanish, so you can learn about language identification. There is also a document with anonymized Personal Identifiable Information (PII) for the Content Moderator lab.
+The dataset has 22 files and ~15 MBs. It includes public Microsoft business documents. There is a document in spanish, so you can learn about language identification. There is also a document with anonymized Personal Identifiable Information (PII) for the Content Moderator lab.
 
 Since we are working with unstructured data, any set of files can be used. In other words, this could be a **Bring Your Own Data** solution; you can test later with any dataset you want.
 
