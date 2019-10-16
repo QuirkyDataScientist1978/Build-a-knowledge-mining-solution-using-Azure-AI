@@ -20,9 +20,13 @@ Cloning the repo will download all the training materials to your computer, incl
 
 1. Create a new resource group, click **Resources groups**, then click **Add**.  Select a subscription, type a name for the group, such as **INIT-kmb** and then select a region.  Click **Review + Create**, then click **Create**
 
-1. In the resource group, click **Add**.  Search for **Azure Search**, then select **Azure Search**, then click **Create**. In addition to facilitating organization and visualization in the portal, using a single resource group helps you, if necessary at the end of the training, remove all services created. If you want to keep this solution up and running, for demos and POCs in minutes with your own data, this resources cleaning isn't necessary.
+1. In the resource group, click **+Add**.  
 
-1. Click **Create a resource**, search for Azure Search, and click **Create**. See [Create an Azure Search service in the portal](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal) if you are setting up a search service for the first time, and use the bullet point list below for the details you will use to fill out the details for the Azure Search service.
+1.  Search for **Azure Search**, then select **Azure Search**, then click **Create**. 
+
+>**NOTE** In addition to facilitating organization and visualization in the portal, using a single resource group helps you, if necessary at the end of the training, remove all services created. If you want to keep this solution up and running, for demos and POCs in minutes with your own data, this resource cleaning isn't necessary.
+
+>**NOTE** See [Create an Azure Search service in the portal](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal) if you are setting up a search service for the first time, and use the bullet point list below for the details you will use to fill out the details for the Azure Search service.
 
   ![Dashboard portal](../resources/images/lab-environment-creation/create-service-full-portal.png)
 
@@ -51,7 +55,9 @@ Cloning the repo will download all the training materials to your computer, incl
 - Central India
 - Australia East
 
-1. For **Pricing tier**, select **Standard**.  For deeper information on Azure Search pricing and limits, click [here](https://azure.microsoft.com/pricing/details/search/) and [here](https://docs.microsoft.com/en-us/azure/search/search-limits-quotas-capacity).
+1. For **Pricing tier**, select **Standard**.  
+
+>**NOTE** For deeper information on Azure Search pricing and limits, review [pricing](https://azure.microsoft.com/pricing/details/search/) and [capcity](https://docs.microsoft.com/en-us/azure/search/search-limits-quotas-capacity).
 
 1. Click **Review + Create**, then click **Create**
 
@@ -71,7 +77,9 @@ The enrichment pipeline pulls from Azure data sources. Source data must originat
 
 1. Ensure your newly created resource group is selected. This resource group should be used for all services of this training, not only for this storage account. Use a name that allows you to easily identify these resources in the future, such as  **kmb-rg**
 
-1. Type a unique name for your storage account, such as **kmbstorage**. This name can contain only lowercase letters and numbers. It also must have between 3 and 24 characters
+1. Type a unique name for your storage account, such as **INITkmbstorage**. 
+
+>**NOTE** This name can contain only lowercase letters and numbers. It also must have between 3 and 24 characters
 
 1. Select the same location as your Azure Search resource.  This will help to avoid latency
 
@@ -83,17 +91,19 @@ The enrichment pipeline pulls from Azure data sources. Source data must originat
 
 1. Click **Review + create**, then click **Create**
 
-1. From the storage account **Overview** tab, click the link to **Blobs**. Now you will create 2 containers.
+1. From the storage account **Overview** tab, click the link to **Containers**. We will create 2 containers.
 
 1. Click the **+Container** link. For the name type `projections`
 
-1. Select **Container** for Access Type.
+1. Select **Container** for Access Type, then click **OK**
 
 1. Click the **+Container** link. For the name type `basicdemo`
 
-1. Select **Container** for Access Type.
+1. Select **Container** for Access Type, then click **OK**
 
-1. Select the new container, then click **Upload**.  Browse to the **\resources\dataset** cloned github folder and select all the files, then click **Open**
+1. Select the new **basicdemo** container, then click **Upload**.  Browse to the **\resources\dataset** cloned github folder.
+
+1.  Select all the files, then click **Open**
 
 1. Click **Upload**, wait for all the files to upload.
 

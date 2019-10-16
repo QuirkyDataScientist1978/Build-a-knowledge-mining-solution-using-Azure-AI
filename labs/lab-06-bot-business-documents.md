@@ -67,21 +67,27 @@ As part of the environment creation lab, you should have cloned the repository t
 
 1. Under **resources > code-bot**, you should be able to locate a "Microsoft Visual Studio Solution File" called **CognitiveSearchBot.sln**. Double-click on it to open the solution in Visual Studio.  
 
-1. Once the solution is open, right-click on the "Solution 'CognitiveSearchBot'" in the Solution Explorer (from now on we'll just refer to this as "the solution") and select **Rebuild** to pull down all the dependencies required.  
+1. Once the solution is open, in Solution Explorer, right-click on the  `CognitiveSearchBot` solution (from now on we'll just refer to this as "the solution") and select **Rebuild** to pull down all the dependencies required.  
 
-1. Right-click on the solution and select "Manage NuGet Packages for Solution...". Under "Installed", you should find "Microsoft.Azure.Search" listed. There's no action here, but you should know that this package contains libraries that make it very easy for us to call the Azure Cognitive Search API and process the results.
+1. Right-click on the solution and select **Manage NuGet Packages for Solution...** 
+
+1.  Under `Installed`, you should find `Microsoft.Azure.Search` listed. There's no action here, but you should know that this package contains libraries that make it very easy for us to call the Azure Cognitive Search API and process the results.
 
 ### Step 2.1 - Understanding the Code
 
 There is a lot of "stuff" in this solution. If you've worked with bots before, you may be interested in looking around to see how we've set up the state, regular expressions, and the dialogs/responses. If you've never worked with bots before, do not fret! This is not a bots course, so we'll walk you through the important things we want you to learn.
 
+> **NOTE** You can reference the [AI-100 learning](https://github.com/MicrosoftLearning/AI-100-Design-Implement-Azure-AISol) to become more familar with the bot framework and other cognitive services.
+
 + Let's search for some of the BFV4 components mentioned before.
 
   + In the Solution Explorer, check the folders that organize the code: **Dialogs, Middleware, Responses, Utilities**.
 
-  + Open **SearchDialogBase.cs** by double-clicking on it in the Solution Explorer, it is in the Dialogs folder on the Solution Explorer. While there are lots of files in this solution, this is one of the most relevant. It does the integration with your search service. Spend at least five minutes reading the file **from start to finish**. We've commented what's happening on almost every line, so it is hopefully easy to follow, even if you don't have a background with bots. This code shows you how to interact with the Search service using C# and the Azure Search SDK. Componets like `SearchResponses`, `ISearchIndexClient`, and `SearchHitStyler` optimize the development and organize the interaction with the Azure Search Service.
+  + In the `Dialogs` folder, open **SearchDialogBase.cs** by double-clicking on it in the Solution Explorer. 
+  
+  >**Note** While there are lots of files in this solution, this is one of the most relevant. It does the integration with your search service. Spend at least five minutes reading the file **from start to finish**. We've commented what's happening on almost every line, so it is hopefully easy to follow, even if you don't have a background with bots. This code shows you how to interact with the Search service using C# and the Azure Search SDK. Componets like `SearchResponses`, `ISearchIndexClient`, and `SearchHitStyler` optimize the development and organize the interaction with the Azure Search Service.
 
-  + Open the **MainDialog.cs** file, in the same Dialogs folder. You can see how the state of the bot is managed within the `waterfalldialog`. At the end of the file you will see 3 `case` commands to route the main dialog, where you are now, the other possible dialogs of the bot. The interaction "help" drives the dialog straight to a response. Let's check them in the next item.
+  + In the same `Dialogs` folder, open the **MainDialog.cs** file. You can see how the state of the bot is managed within the `waterfalldialog`. At the end of the file you will see 3 `case` commands to route the main dialog, where you are now, the other possible dialogs of the bot. The interaction "help" drives the dialog straight to a response. Let's check them in the next item.
 
   + In the **Response** folder you will see the 2 possible responses of the bot, one for the results and the main response, with the other possible answers.
 
@@ -101,7 +107,7 @@ There is a lot of "stuff" in this solution. If you've worked with bots before, y
 
 1. Save the file
 
->**Note** The Bot code has many references to the index fields. If you did not named the content moderator field as **needsModeration** or the OCR field as **myOcrText**, you will need to change the code to use your fields names. The files to be changed are: /Dialogs/ModeratedContentSearchDialog.cs and /Models/SearchHit.cs .
+>**Note** The Bot code has many references to the index fields from previous labs. If you did not complete those labs or if you did not name the content moderator field as **needsModeration** or the OCR field as **myOcrText**, you will need to change the code to use your fields names. The files to be changed are: /Dialogs/ModeratedContentSearchDialog.cs and /Models/SearchHit.cs 
 
 ## Step 3 - Interacting with your Cognitive Search Bot
 

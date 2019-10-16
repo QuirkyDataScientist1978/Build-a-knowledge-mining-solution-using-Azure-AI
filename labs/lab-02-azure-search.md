@@ -166,7 +166,7 @@ The service limits for this training are listed below. For the complete list, cl
 ## Lab Steps
 
 Let's start the hands-on lab. Since you have finished the [Environment Creation](../labs/lab-01-environment-creation.md), you just need to follow the steps below.
-**Please note that the product team is always optimizing the portal. If you find any difference, please report to the LearnAI Team and try to understand what has changed to move forward with the lab.**
+**Please note that the product team is always optimizing the portal. If you find any difference, please report to the LearnAI Team via GitHub Issues then try to understand what has changed to move forward with the lab.**
 
 ### Step 1 - Import Data from a new data source
 
@@ -192,13 +192,15 @@ Using the Azure Search service created in the previous lab, you will use the "Im
 
 ![Data Source Graphic](../resources/images/lab-azure-search/data-source-2.png)
 
+> **NOTE** You may get an error if you did not wait for the Azure Search instance to fully deploy.  In some cases this could take up to 20 minutes.
+
 ### Step 2 - Attach Cognitive Services
 
-1. Click on the **Attach Cognitive Services** link and use the Cognitive Services account you created in the last step of the [previous lab](../labs/lab-01-environment-creation.md)
+1. Expand the **Attach Cognitive Services** link and select the Cognitive Services account you created in the last step of the [previous lab](../labs/lab-01-environment-creation.md)
 
 > **Note** If you don't see it listed for you, click on **Create new Cognitive Services resource** and follow the tutorial. It will open the Azure Portal in a new browser window. After you have finished, return to the previous window where we are using the Azure Search wizard to import data.
 
-1. Click on **Add Enrichments**
+1. Expand the **Add Enrichments** link
 
 1. Name your skillset as `myportalskillset`
 
@@ -206,9 +208,11 @@ Using the Azure Search service created in the previous lab, you will use the "Im
 
 1. Ensure `Source data field` is set to **merged_content**
 
-1. Check all the skill checkboxes
+1. Check all the skill checkboxes for both Text and Image skills
 
-1. Click **Save enrichments to a knowledge store** link, copy the storage account connection string into the textbox.
+1. Expand the **Save enrichments to a knowledge store** link, check all the projection checkboxes.
+
+1.  Copy the storage account connection string into the textbox.
 
 1. Check all the checkboxes
 
@@ -222,7 +226,9 @@ Using the Azure Search service created in the previous lab, you will use the "Im
 
 1. **Keep `metadata_storage_path` as the key.** This is a unique identifier for each file of the data source. It is a good idea to use the physical path of file, since it is unique by design. Since our dataset is on blob storage, the content of this field is the file URL, that's why it is unique by design. If you check the other options, you will see that metadata_storage_path is only one field that can guarantee uniqueness. As of December 2018, the key maximum size is 1024 characters. This limit won't be a problem for this training, but the workaround is to reduce the file name length and also the path. This limit is currently under analysis of the product team.
 
-1. Name the **Suggester** as `myportalsuggester` and set the **Search Mode** to **"analyzingInfixMatching".** The Suggester feature provides type-ahead suggestions, as you can see in web search engines like [Bing](www.bing.com).
+1. Name the **Suggester** as `myportalsuggester`
+
+1.  Set the **Search Mode** to **"analyzingInfixMatching".** The Suggester feature provides type-ahead suggestions, as you can see in web search engines like [Bing](www.bing.com).
 
 + Notice the 3 types of fields available:
   + content: all text from the documents that exists when they are cracked (opened) by Azure Search
@@ -257,7 +263,7 @@ As you can see, not all fields should be retrievable or filterable and so on. We
 
 1. Set the schedule as **once**
 
-1. Click the **Advanced Options** link and:
+1. Expand the **Advanced Options** link
 
 1. Set **Max failed items** to `-1`, we don't want the indexer to stop processing a document even when any cognitive skill has an error
 
@@ -285,7 +291,7 @@ As you can see, not all fields should be retrievable or filterable and so on. We
 
 > **Note** If it is taking a long time for your indexer to index your content, check that you created Azure Search and the Storage Account resources in the same region.
 
-1. You should see the newly created indexer in the list, with status indicating "in progress" , "Failed", or "Warning". If not, click the refresh button in the top-middle of the overview tab. The final expected status is "Warning", along with the number of documents indexed, "23/23" is the correct number. Warnings are caused by extra long words and big texts. The indexer knows how to deal with them, but warns you.
+1. You should see the newly created indexer in the list, with status indicating "in progress" , "Failed", or "Warning". If not, click the refresh button in the top-middle of the overview tab. The final expected status is "Warning", along with the number of documents indexed, "22/22" is the correct number. Warnings are caused by extra long words and big texts. The indexer knows how to deal with them, but warns you.
 
 1. Click on the refresh button, top middle of the page, until the execution is over. The "Warning" status is expected, click on the Indexer name to see the summary. In this page you will see all the executions this Indexer may have and its details, duration and so on.
 

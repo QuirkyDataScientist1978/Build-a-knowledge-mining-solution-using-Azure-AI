@@ -63,6 +63,7 @@ namespace CognitiveSkill
             var client = new HttpClient();
 
             //TO-DO: URL of the Moderator API. Fix the Prefix with your URL, what can be found in the Azure Portal. 
+            //NOTE:  Depending on the type of Cognitive Services instance (all vs single) your url may be a bit different
             //If you are using southcentralus, don't need to change anything
             var uriPrefix = "https://southcentralus.api.cognitive.microsoft.com/contentmoderator";
             var uriSuffix = "/moderate/v1.0/ProcessText/Screen?autocorrect=false&PII=true&classify=false&language=eng";
@@ -70,7 +71,7 @@ namespace CognitiveSkill
             //TO-DO: Add your content moderator key here
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "your content moderator key here");
 
-            //TO-DO: WITHOUT he https://, check the url of the region of your content moderator API. If nos southcentralus, change it.
+            //TO-DO: WITHOUT he https://, check the url of the region of your content moderator API. If not southcentralus, change it.
             client.DefaultRequestHeaders.Add("Host", "southcentralus.api.cognitive.microsoft.com");
 
 

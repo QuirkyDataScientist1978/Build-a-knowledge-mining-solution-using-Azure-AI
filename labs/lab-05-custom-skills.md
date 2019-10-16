@@ -68,7 +68,7 @@ Content Moderator API also has a tool for human review of the moderation. For mo
 + Response Latency <= 1000 ms
 + Response content with a json file where you can read all of the detected problems.
 
-> **Note** The "Index" field indicates the position of the term within the submitted text.
+> **Note** The `Index` field indicates the position of the term within the submitted text.
 
 ## Step 2 - Visual Studio
 
@@ -100,7 +100,11 @@ In the image below you can see very important aspects of the code you are about 
 + Add your key. This is the same key of the first step of this lab
 + If necessary, change the host url with the same endpoint of the first step of this lab, but without `https://` and without `/contentmoderator`
 
->**Note** Our dataset has a text file with PII, in english. That's why we are only testing this capability, to enforce this regulation within the business documents. This simple usage was defined to keep the training simple. For advanced scenarios, you can use all other Content Moderator capabilities.
+>**Note**:  When creating a single type cognitive services instance, the url may be slightly different than the `all` type:
+
+- https://{yourname}.cognitiveservices.azure.com/contentmoderator
+- https://{region}.api.cognitive.microsoft.com/contentmoderator
+
 >**Note**: This Azure Function output is **Edm.String**, but this lab converts it to a boolen information: if the document has moderated content or not.
 
 ## Step 3 - Test the function from Visual Studio
@@ -135,6 +139,8 @@ Content-Type: application/json
    ]
 }
 ```
+
+>**Note** Our dataset has a text file with PII, in english. That's why we are only testing this capability, to enforce this regulation within the business documents. This simple usage was defined to keep the training simple. For advanced scenarios, you can use all other Content Moderator capabilities.
 
 ### Response
 
@@ -245,6 +251,8 @@ you have to add an instruction for maximum batch size to be just ```1``` to send
 
 ```
 
+4.  Be sure to replace the function url in the json above
+
 ### Step 7.1 - Challenge
 
 As you can see, again we are not giving you the body request. One more time you can use the previous lab as a reference.  
@@ -272,7 +280,7 @@ Now we have our data enriched with pre-defined and custom skills. Use the Search
 
 Here is another challenge for you. Use [this](https://docs.microsoft.com/en-us/azure/search/cognitive-search-create-custom-skill-example) documentation as a reference and:
 
-1. Create and publish another Azure Function, for the Translation API
+1. Create and publish another Azure Function, for the [Translation API](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/)
 
 1. Connect this new API into your Enrichment Pipeline skillset
 

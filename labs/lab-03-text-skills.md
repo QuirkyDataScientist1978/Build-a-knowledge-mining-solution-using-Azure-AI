@@ -57,7 +57,7 @@ If you are not so familiar with Postman, perform the following detailed steps to
 1. In the new request, for the request type, click on the downward pointing arrow next to **"GET"**, and change it to select **"POST"**.
 
 1. In the text box that shows the words "Enter request url" type in the following information, replacing **[service name]** with the name of the Azure Search service you created:
-      > <<https://[your-service-name].search.windows.net/datasources?api-version=2019-05-06-Preview>  
+      > <https://[your-service-name].search.windows.net/datasources?api-version=2019-05-06-Preview>  
 
 1. Click the **Headers** tab.  On this tab is a table of that has three columns with the titles of KEY, VALUE and DESCRIPTION respectively, and a single row.
 
@@ -71,7 +71,7 @@ If you are not so familiar with Postman, perform the following detailed steps to
 
 1. Click the **Body** tab.  For the body type, select **Raw**
 
-1. In the **Request body**, you will specify the blob container name and connection string you created earlier to create a data source and load data into the data source as follows:
+1. In the **Request body**, copy the following:
 
 ```json
 {
@@ -86,11 +86,11 @@ If you are not so familiar with Postman, perform the following detailed steps to
 }  
 ```
 
->**Note** Double check you have used the all connection string, it is very long and sometimes you may have not copied it all.
-
 1. Replace the connection string and container with the Azure Blob storage settings you created earlier. The following image can be used to confirm the settings you should define. Please take a look on all red boxes.
 
       ![Postman Help Image](../resources/images/lab-text-skills/postman-help.png)
+
+>**Note** Double check you have used the all connection string, it is very long and sometimes you may have not copied it all.
 
 1. Click **Send**.  The web test tool should return a status code of **201 Created** confirming success.
 
@@ -116,7 +116,7 @@ In this step, you define a set of enrichment steps that you want to apply to you
 
   Reference the skillset name ```demoskillset``` for the rest of this lab.
 
-  1. Click the **+** to create a new request
+  1. In the top navigation with tabs of your current requests, click the **+** to create a new request
 
   1. Change the request type to **PUT**
 
@@ -124,7 +124,7 @@ In this step, you define a set of enrichment steps that you want to apply to you
 
   1. Again set the content-type and api-key as you did above.
   
-  1. In the **Request body**, you will use JSON to define the Language Detection, Text Split, Named Entity Recognition and Key Phrase Extraction Skills as follows.  Be sure to replace the cognitive services key with your service key:
+  1. In the **Request body**, you will use JSON to define the Language Detection, Text Split, Named Entity Recognition and Key Phrase Extraction Skills as follows.
 
 ```json
 {
@@ -210,7 +210,9 @@ In this step, you define a set of enrichment steps that you want to apply to you
 }
 ```
 
->New! Entity Recognition skill initial types were "Person", "Location" and "Oragnization". Types "Quantity", "Datetime", "URL" and "Email" were added on November 28th, 2018. This means that Entity Recognition Skill can be used 7 times in the same skillset. **But you can't use the same type twice in the same skillset**.
+>**UPDATE** Entity Recognition skill initial types were "Person", "Location" and "Oragnization". Types "Quantity", "Datetime", "URL" and "Email" were added on November 28th, 2018. This means that Entity Recognition Skill can be used 7 times in the same skillset. **But you can't use the same type twice in the same skillset**.
+
+1.  Towards the bottom of the body content, replace the cognitive services key with your service key from your setup lab
 
 1. Click **Send**.  The web test tool should return a status code of **201 Created** confirming success.
 
