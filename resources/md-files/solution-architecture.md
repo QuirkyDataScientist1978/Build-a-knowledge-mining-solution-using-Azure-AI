@@ -2,7 +2,7 @@
 
 This solution uses a variety of pre-built cognitive skills and extend the AI transformations with custom skills, based on Azure Functions. In this Architecture document you will see details of the solution created throughout the training labs. There are details about the target use case, the dataset, the labs, the cost, the tools, and the interface.
 
-To fully understand this document, It is expected that you have understood all the information presented in the [introduction](./Introduction.md)) of the training: **What is Cognitive Search, How it works, Why it is relevant for any company in the world, when to use it**.
+To fully understand this document, It is expected that you have understood all the information presented in the [introduction](./introduction.md) of the training: **What is Cognitive Search, How it works, Why it is relevant for any company in the world, when to use it**.
 
 The labs have a progressive level of complexity and they will help you to understand how each aspect of the technology can be used for the search solution.
 
