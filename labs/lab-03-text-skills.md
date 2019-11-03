@@ -422,7 +422,7 @@ Once the indexer is defined, it runs automatically when you submit the request. 
 
 1. Ensure the request type is **GET**
 
-1. Set the url to **<https://[your-service-name].search.windows.net/indexers/demoindexer?api-version=2019-05-06-Preview>**
+1. Set the url to **<https://[your-service-name].search.windows.net/indexers/demoindexer/status?api-version=2019-05-06-Preview>**
 
 1. Again set the content-type and api-key as you did above.
 
