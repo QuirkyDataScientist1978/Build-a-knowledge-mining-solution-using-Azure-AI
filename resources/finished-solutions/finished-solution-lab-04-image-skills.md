@@ -31,7 +31,7 @@ api-key: [api-key]
 ## Skillset
 
 ```http
-PUT https://[your-service-name].search.windows.net/skillset/demoskillset?api-version=2019-05-06
+PUT https://[your-service-name].search.windows.net/skillsets/demoskillset?api-version=2019-05-06
 Content-Type: application/json
 api-key: [api-key]
 ```
