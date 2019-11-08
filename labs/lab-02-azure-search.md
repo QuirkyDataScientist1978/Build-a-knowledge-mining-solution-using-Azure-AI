@@ -1,6 +1,6 @@
 # Azure Search Fundamentals
 
-In this lab, you will learn the basics of the Azure Search service and how to ingest and index a provided dataset using the built-in tools. This lab will teach you how to use the **Azure Portal** to ingest and search the business documents of the [provided dataset](../resources/dataset/readme.md). For more details on the required environment for this lab, including the dataset and the Azure Service, click [here](../labs/lab-01-environment-creation.md).
+In this lab, you will learn the basics of the Azure Search service and how to ingest and index a provided dataset using the built-in tools. This lab will teach you how to use the **Azure Portal** to ingest and search the business documents of the [provided dataset](../resources/dataset). For more details on the required environment for this lab, including the dataset and the Azure Service, click [here](../labs/lab-01-environment-creation.md).
 
 ## What is Azure Search
 
