@@ -38,7 +38,7 @@ This Cognitive Search solution addresses these problems, extracting insights fro
 
 ## Labs Details
 
-In the [First Lab](../../labs/lab-environment-creation.md) you will learn how to create the required environment for this training, including the business documents dataset upload into Azure Blob Storage.
+In the [First Lab](../../labs/lab-01-environment-creation.md) you will learn how to create the required environment for this training, including the business documents dataset upload into Azure Blob Storage.
 
 In the [Second Lab](../../labs/lab-02-azure-search.md) you will learn how index the business documents with "basic" Azure Search. The objective is teach how the standard features adds sophisticated search capabilities to your documents: natural language search, ranking, paging, suggestions and so on. This lab will use the Azure Portal only, no coding is required.
 
