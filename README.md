@@ -121,10 +121,6 @@ Full Course classroom training:  16 hours
 
 > **Note**: Once you've completed the labs, we recommend deleting the resource group (and all the resources in it) to avoid incurring extra charges, unless you want to use this solution as a tool for demos and POCs.
 
-## Contact
-
-Contact us: <LearnAI@microsoft.com> and <http://aka.ms/LearnAI-GitHub>
-
 ## Useful Links - ACE Team Blog
 
 + [Using Azure-Functions-for-Python to create a Cognitive Search Filtering Custom Skill](https://techcommunity.microsoft.com/t5/AI-Customer-Engineering-Team/Using-Azure-Functions-for-Python-to-create-a-Cognitive-Search/ba-p/850106)
