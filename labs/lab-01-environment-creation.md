@@ -73,6 +73,8 @@ Cloning the repo will download all the training materials to your computer, incl
 
 The enrichment pipeline pulls from Azure data sources. Source data must originate from a supported data source type of an [Azure Search indexer](https://docs.microsoft.com/en-us/azure/search/search-indexer-overview). For this exercise, we use blob storage to showcase multiple content types.
 
+Please note that in this training we are not creating a solution for production environments. Many parameters and processes are not aligned with best performance and safety practices. An example is the type of access of the storage account containers, what will be in this step. And that's by design, to make it easier for us to visualize the data.
+
 1. From the resource group, click **+Add**.  Search for **storage account**, select it, then click **Create**
 
 1. Ensure your newly created resource group is selected. This resource group should be used for all services of this training, not only for this storage account. Use a name that allows you to easily identify these resources in the future, such as  **kmb-rg**
@@ -111,7 +113,7 @@ The enrichment pipeline pulls from Azure data sources. Source data must originat
 
 After the upload, please follow these 3 steps:
 
-- Ensure that 21 files were uploaded to the **basicdemo** container
+- Ensure that all 20+ files from the dataset folder were uploaded to the **basicdemo** container
 
 - Navigate back to the storage account blade, under **Settings**, click **Access keys**.
 
