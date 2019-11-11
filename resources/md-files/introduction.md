@@ -68,8 +68,6 @@
 
 ![Slide](../../resources/slides/Slide34.PNG)
 
-![Slide](../../resources/slides/Slide35.PNG)
-
 ## Next Step
 
 [Solution architecture](./solution-architecture.md) or [Back to Labs Menu](../../README.md)

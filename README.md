@@ -26,9 +26,9 @@ While this course focuses on Azure Cognitive Search capabilities, an in-depth co
 
 In this course we will cover these key concepts:
 
-1. Fundamentals of Azure Search and its capabilities
+1. Fundamentals of Azure Cognitive Search and its capabilities
 
-1. Microsoft Cognitive Search and its key business scenarios
+1. Knowledge Mininig business scenarios
 
 1. Building an enrichment data pipeline for search using predefined and custom skillsets:
 
@@ -60,7 +60,7 @@ Intelligent search is relevant to many major industries. Some are listed below.
 
 ### Pre-requisites
 
-1. Fundamental working knowledge of Azure Portal, Azure Functions and Azure Search
+1. Fundamental working knowledge of Azure Portal, Azure Functions and Azure Cognitive Search
 1. Familiarity with Visual Studio and minimum C# knowledge
 1. Familiarity with Azure Bots and Microsoft Bot Framework v4
 1. Familiarity with [Postman](https://www.getpostman.com/)
@@ -70,7 +70,7 @@ If you do not have any of the above pre-requisites, please find below links
 1. *To Read (10 minutes):* [Visual Studio Tutorial](https://docs.microsoft.com/en-us/visualstudio/ide/visual-studio-ide)
 1. *To Read (8 minutes):* [Azure Bot Service Overview](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)
 1. *To Read (4 minutes):* [Azure Functions Overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)  
-1. *To Read (10 minutes):* [Azure Search Overview](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)
+1. *To Read (10 minutes):* [Azure Cognitive Search Overview](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search)
 1. *To Read (7 minutes):* [Postman Tutorial](https://docs.microsoft.com/en-us/azure/search/search-fiddler)
 1. *To Do (30 minutes):* [C# Quickstart](https://docs.microsoft.com/en-us/dotnet/csharp/quick-starts/)
 
@@ -105,17 +105,17 @@ Full Course classroom training:  16 hours
 
 2. [Architecture](./resources/md-files/solution-architecture.md) – **Solution Architecture** for building enterprise search solution.
 
-3. [Lab 1](./labs/lab-01-environment-creation.md) - Azure - **Environment Creation**
+3. [Lab 1](./labs/lab-01-environment-creation.md) - **Environment Creation**
 
-4. [Lab 2](./labs/lab-02-azure-search.md) - Azure Search - **Indexing Blob Storage**
+4. [Lab 2](./labs/lab-02-azure-search.md) - **Indexing Blob Storage**
 
-5. [Lab 3](./labs/lab-03-text-skills.md) - Cognitive Search – **Text Skills**
+5. [Lab 3](./labs/lab-03-text-skills.md) - **Text Skills**
 
-6. [Lab 4](./labs/lab-04-image-skills.md) - Cognitive Search – **Image Skills**
+6. [Lab 4](./labs/lab-04-image-skills.md) – **Image Skills**
 
-7. [Lab 5](./labs/lab-05-custom-skills.md) - Cognitive Search – **Custom Skills**
+7. [Lab 5](./labs/lab-05-custom-skills.md) - **Custom Skills**
 
-8. [Lab 6](./labs/lab-06-bot-business-documents.md) - Build and Integrate a **Bot** with Cognitive Search API
+8. [Lab 6](./labs/lab-06-bot-business-documents.md) - Build and Integrate a **Bot** with the Search API
 
 9. [Lab 7](./labs/lab-final-case.md) - **Architecture Design Session + Hackathon**
 
