@@ -168,6 +168,13 @@ After the deployment, execute the following activities:
 and follow the instructions to **Connecting to bots hosted remotely**
 + Optional: You can also try to [add your bot to Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-overview)
 
+## Extra Content
+
+If you want to learn more about bots:
+
++ Leverage the Conversational AI free trainings on [Microsoft AI School](https://aischool.microsoft.com/en-us/conversational/learning-paths).
++ Azure Bots Service [documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0) has tutorials, quick starts, and samples.
+
 ## Cleaning your environment
 
 You have completed all of the hands-on portions of the course. We recommend deleting the resource group (and all of the resources in it) to avoid incurring extra charges.
