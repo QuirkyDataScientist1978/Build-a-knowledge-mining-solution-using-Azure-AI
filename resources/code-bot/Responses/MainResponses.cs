@@ -16,7 +16,7 @@ namespace Responses
         public static async Task ReplyWithHelp(ITurnContext context)
         {
             IMessageActivity activity = context.Activity.CreateReply();
-            activity.Text = $"I can retrieve cognitive fields from Azure Search. To start a new search, respond \"search\"";
+            activity.Text = $"I can retrieve cognitive fields from Azure Cognitive Search. To start a new search, respond \"search\"";
             activity.SuggestedActions = HeroCardUtility.InitialSuggestions();
             await context.SendActivityAsync(activity);
         }

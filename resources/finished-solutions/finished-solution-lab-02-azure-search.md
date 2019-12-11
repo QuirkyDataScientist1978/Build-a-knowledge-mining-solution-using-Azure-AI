@@ -1,8 +1,8 @@
-# Finished Solution - Azure Search Lab
+# Finished Solution - Azure Cognitive Search Lab
 
 Hello!
 
-Here are suggestions for the challenge at the end of the [Azure Search Lab](../../labs/lab-02-azure-search.md)
+Here are suggestions for the challenge at the end of the [Azure Cognitive Search Lab](../../labs/lab-02-azure-search.md)
 
 The commands below should be types in the Search Explorer **Query string** bar. Use `Ctrl+F` to make sure your queries are working as expected.
 

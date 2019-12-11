@@ -6,6 +6,19 @@ In this lab, you will verify the lack of image processing results we got from th
 
 There are png and jpg images within the provided dataset. If you decided to bring your own data, it was suggested to also include images. But we did not add any predefined skillsets for image analysis. This is exactly what you will do now, but first, let's check out the kind of problems we could expect to see if we used the Language Detection, Text Split, Named Entity Recognition and Key Phrase Extraction Skills on images with steps 1 and 2.
 
+>**Note** You can find all of these Postman requests in the finished solutions directory in the collection export **/resources/finished-solutions/04-Image Skills.postman_collection.json**.  These Postman collections use global variables so you only need to update the search service name and keys one time.  You would execute in the following order:
+
+  + Check Indexer Status
+  + Perform Search (Basic Cogs Fields)
+  + Delete Indexer
+  + Delete Index
+  + Delete Skillset
+  + Create Skillset (Set the cogs key global variable first)
+  + Create Index
+  + Create Indexer
+  + Check Indexer Status
+  + Execute Search
+
 ### Step 1 - Checking warning message from the API
 
 Let's check the indexer status again, it has valuable information about our "images problem". You can use the same command we used in the previous lab (pasted below for convenience). If you used another indexer name, just change it in the URL.
@@ -55,7 +68,7 @@ Click [here](../resources/md-files/enrichment-pipeline-details.md) and review ho
 
 ### Step 4 - Cleaning the environment
 
-You need to prepare the environment to add the image analysis you will create. The most practical approach is to delete the objects from Azure Search and rebuild them. This also avoids redundancy of similar information. This cleaning also reduces cost, two replicated/similar indexes will use space os the service. Last, but not least: to teach about DELETES is also an objective of this training. With the exception of the data source, you will delete everything else. Resource names are unique, so by deleting an object, you can recreate it using the same name.
+You need to prepare the environment to add the image analysis you will create. The most practical approach is to delete the objects from Azure Cognitive Search and rebuild them. This also avoids redundancy of similar information. This cleaning also reduces cost, two replicated/similar indexes will use space os the service. Last, but not least: to teach about DELETES is also an objective of this training. With the exception of the data source, you will delete everything else. Resource names are unique, so by deleting an object, you can recreate it using the same name.
 
  Save all the scripts (API calls) you've done up until this point, including the definition json files you used in the "body" field.
  Let's start deleting the index and the indexer. You can use Azure Portal or API calls:
@@ -98,9 +111,9 @@ Skipping the services and the data source creation, repeat the other steps of th
 
 1. Create a new index exactly like the one we did in the previous lab, but with an extra field for the OCR text from the images. Name the new field as **myOcrText**. You can use the same json body field and add the new OCR field in the end. If you decide to use a different name, you will need to change the Bot code to make it work.
 
-1. Create a new indexer exactly like the one we did in the previous, but with and extra mapping for the new skill and the new field listed above. You can use the same json body field and add the new OCR mapping in the end
+2. Create a new indexer exactly like the one we did in the previous, but with and extra mapping for the new skill and the new field listed above. You can use the same json body field and add the new OCR mapping in the end
 
-1. Check the indexer execution status as you did in the previous lab
+3. Check the indexer execution status as you did in the previous lab
 
 **TIP 2:** Your new field in the Index must have the [Collection Data Type](https://docs.microsoft.com/en-us/rest/api/searchservice/Supported-data-types?redirectedfrom=MSDN).
 
@@ -128,7 +141,7 @@ api-key: [api-key]
 
 #### Step 5.4 - Portal
 
-Log into the Azure portal and verify the creation of the skillset, index and indexers in the Azure Search dashboard. If nothing is missed, use the Search Explorer to do the searches below. Click on the files URLs (crtrl+click) to check if the AI services created the metadada as expected.
+Log into the Azure portal and verify the creation of the skillset, index and indexers in the Azure Cognitive Search dashboard. If nothing is missed, use the Search Explorer to do the searches below. Click on the files URLs (ctrl+click) to check if the AI services created the metadata as expected.
 
 + Search for "linux"
 
@@ -155,4 +168,3 @@ If you could not make it, [here](../resources/finished-solutions/finished-soluti
 ## Next Step
 
 [Custom Skills Lab](../labs/lab-05-custom-skills.md) or [Back to Read Me](../README.md)
-  

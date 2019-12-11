@@ -71,7 +71,7 @@ As part of the environment creation lab, you should have cloned the repository t
 
 1. Right-click on the solution and select **Manage NuGet Packages for Solution...** 
 
-1.  Under `Installed`, you should find `Microsoft.Azure.Search` listed. There's no action here, but you should know that this package contains libraries that make it very easy for us to call the Azure Cognitive Search API and process the results.
+1. Under `Installed`, you should find `Microsoft.Azure.Search` listed. There's no action here, but you should know that this package contains libraries that make it very easy for us to call the Azure Cognitive Search API and process the results.
 
 ### Step 2.1 - Understanding the Code
 
@@ -85,7 +85,7 @@ There is a lot of "stuff" in this solution. If you've worked with bots before, y
 
   + In the `Dialogs` folder, open **SearchDialogBase.cs** by double-clicking on it in the Solution Explorer. 
   
-  >**Note** While there are lots of files in this solution, this is one of the most relevant. It does the integration with your search service. Spend at least five minutes reading the file **from start to finish**. We've commented what's happening on almost every line, so it is hopefully easy to follow, even if you don't have a background with bots. This code shows you how to interact with the Search service using C# and the Azure Search SDK. Componets like `SearchResponses`, `ISearchIndexClient`, and `SearchHitStyler` optimize the development and organize the interaction with the Azure Search Service.
+  >**Note** While there are lots of files in this solution, this is one of the most relevant. It does the integration with your search service. Spend at least five minutes reading the file **from start to finish**. We've commented what's happening on almost every line, so it is hopefully easy to follow, even if you don't have a background with bots. This code shows you how to interact with the Search service using C# and the Azure Cognitive Search SDK. Componets like `SearchResponses`, `ISearchIndexClient`, and `SearchHitStyler` optimize the development and organize the interaction with the Azure Cognitive Search Service.
 
   + In the same `Dialogs` folder, open the **MainDialog.cs** file. You can see how the state of the bot is managed within the `waterfalldialog`. At the end of the file you will see 3 `case` commands to route the main dialog, where you are now, the other possible dialogs of the bot. The interaction "help" drives the dialog straight to a response. Let's check them in the next item.
 
@@ -99,7 +99,7 @@ There is a lot of "stuff" in this solution. If you've worked with bots before, y
 
 1. Open the **Constants.cs** file.
 
-1. Edit the string values to match your Azure environment resources. Since you've created and tested the index in Postman, you should have these readily available. If not, you can open the Azure portal and locate your Azure Search service to get the needed information.
+1. Edit the string values to match your Azure environment resources. Since you've created and tested the index in Postman, you should have these readily available. If not, you can open the Azure portal and locate your Azure Cognitive Search service to get the needed information.
 
 + Search service name
 + Search service key
@@ -117,9 +117,9 @@ There is a lot of "stuff" in this solution. If you've worked with bots before, y
 
 1. Select the button **Open Bot** from the Welcome page.
 
-1. Click **Browse**, then navigate to the **BotConfiguration.bot** file in the **resources > code-bot** folder.
+1. Select **Browse**, then navigate to the **BotConfiguration.bot** file in the **resources > code-bot** folder.
 
-1. Click **Open**, then click **Connect**.  This should open a chat window with your bot. You can start by saying some sort of greeting ("hi", "hello", "whats up bot", etc.). The bot should respond with a greeting, followed by the help message that says what it can do.
+1. Select **Open**, then select **Connect**.  This should open a chat window with your bot. You can start by saying some sort of greeting ("hi", "hello", "whats up bot", etc.). The bot should respond with a greeting, followed by the help message that says what it can do.
 
 1. Since really all it can do is search, enter **search** to trigger the search dialog. There is also a menu to avoid typing, it comes up right after the greeting. You can also ask for help, but the answer will be the same you had before.
 
@@ -143,7 +143,7 @@ If you want to dive slightly deeper into calling the Azure Cognitive Search API 
 
 First, stop your bot (by hitting the stop button in Visual Studio).  
 
-1. Open the **SearchDialog.cs** file. First, note that on line 3 there is a reference for CognitiveSearchBot, that is using the Azure Search SDK (file **SearchDialogBase.cs**). Remember, this is crucial to running the commands you are about to step through.  
+1. Open the **SearchDialog.cs** file. First, note that on line 3 there is a reference for CognitiveSearchBot, that is using the Azure Cognitive Search SDK (file **SearchDialogBase.cs**). Remember, this is crucial to running the commands you are about to step through.  
 
 1. Next, scroll down to where the search related tasks are located. Place a break point on line 59, where there is the command `await ExecuteSearchAsync(stepContext.Context, searchText);`, by clicking in the grey area left of the numbers. You should see a red dot next to the break point lines, as shown below:  
 

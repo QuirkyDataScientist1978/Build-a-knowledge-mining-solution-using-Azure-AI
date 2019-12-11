@@ -20,7 +20,7 @@ At the end of this training you will have learned:
 + **Why** this technology can be useful for any company
 + **When** to use this solution for demos, POCs and other business scenarios
 
-The hands-on labs will teach you how to use Microsoft Azure Search combined with Microsoft Cognitive Services for entity recognition, image analysis, text translation and indexed search on enterprise business documents. This approach uses Artificial Intelligence to create an advanced search experience.
+The hands-on labs will teach you how to use Microsoft Azure Cognitive Search combined with Microsoft Cognitive Services for entity recognition, image analysis, text translation and indexed search on enterprise business documents. This approach uses Artificial Intelligence to create an advanced search experience.
 
 While this course focuses on Azure Cognitive Search capabilities, an in-depth course on building Bots and integrating various Azure Cognitive Services is available here - [Azure Cognitive Services Bootcamp](https://github.com/Azure/LearnAI-Bootcamp).
 
@@ -28,7 +28,7 @@ In this course we will cover these key concepts:
 
 1. Fundamentals of Azure Cognitive Search and its capabilities
 
-1. Knowledge Mininig business scenarios
+1. Knowledge Mining business scenarios
 
 1. Building an enrichment data pipeline for search using predefined and custom skillsets:
 
@@ -52,7 +52,7 @@ In this course we will cover these key concepts:
 
 Intelligent search is relevant to many major industries. Some are listed below.
 
-1. Retail and health care industries employ chatbots with advanced multi-language support capabilities to service their customers.
+1. Retail and health care industries employ chat bots with advanced multi-language support capabilities to service their customers.
 
 1. Retail, Housing and Automotive industries for sales/listing.
 
@@ -101,13 +101,13 @@ Full Course classroom training:  16 hours
 
 ### Course Modules
 
-1. [Introduction](./resources/md-files/introduction.md) – **Presentation** overview of Azure Search, Cognitive Search, business scenarios and industry specific applications.
+1. [Introduction](./resources/md-files/introduction.md) – **Presentation** overview of Azure Cognitive Search, Cognitive Search, business scenarios and industry specific applications.
 
 2. [Architecture](./resources/md-files/solution-architecture.md) – **Solution Architecture** for building enterprise search solution.
 
 3. [Lab 1](./labs/lab-01-environment-creation.md) - **Environment Creation**
 
-4. [Lab 2](./labs/lab-02-azure-search.md) - **Indexing Blob Storage**
+4. [Lab 2](./labs/lab-02-azure-cognitive-search.md) - **Indexing Blob Storage**
 
 5. [Lab 3](./labs/lab-03-text-skills.md) - **Text Skills**
 

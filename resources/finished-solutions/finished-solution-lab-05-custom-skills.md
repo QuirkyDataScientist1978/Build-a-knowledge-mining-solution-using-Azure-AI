@@ -2,7 +2,7 @@
 
 Hello!
 
-Here are the body requests for the custom skills lab. Don't forget to adjust the URLs to use your Azure Search service name.
+Here are the body requests for the custom skills lab. Don't forget to adjust the URLs to use your Azure Cognitive Search service name.
 
 ## Delete Skillset
 
@@ -347,7 +347,7 @@ Content-Type: application/json
 api-key: [api-key]
 ```
 
-## Filter moderated content using Azure Search Explorer
+## Filter moderated content using Azure Cognitive Search Explorer
 
 ```http
 $select=blob_uri,needsModeration,content&$filter=needsModeration eq true

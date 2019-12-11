@@ -40,7 +40,7 @@ This Cognitive Search solution addresses these problems, extracting insights fro
 
 In the [First Lab](../../labs/lab-01-environment-creation.md) you will learn how to create the required environment for this training, including the business documents dataset upload into Azure Blob Storage.
 
-In the [Second Lab](../../labs/lab-02-azure-search.md) you will learn how index the business documents with "basic" Azure Search. The objective is teach how the standard features adds sophisticated search capabilities to your documents: natural language search, ranking, paging, suggestions and so on. This lab will use the Azure Portal only, no coding is required.
+In the [Second Lab](../../labs/lab-02-azure-cognitive-search.md) you will learn how index the business documents with "basic" Azure Cognitive Search. The objective is teach how the standard features adds sophisticated search capabilities to your documents: natural language search, ranking, paging, suggestions and so on. This lab will use the Azure Portal only, no coding is required.
 
 In the [Third Lab](../../labs/lab-03-text-skills.md) you will learn the next level of data enrichment, using Cognitive Search. It will be clear for you how AI can **extend** the metadata created, enabling an advanced search experience. In this lab you will do some coding with Postman.
 
@@ -48,7 +48,7 @@ In the [Fourth Lab](../../labs/lab-04-image-skills.md) you will learn how text s
 
 In the [Fifth Lab](../../labs/lab-05-custom-skills.md) you will learn how to create a custom skill using Azure Content Moderator API and Azure Functions, connection this transformation into the enrichment pipeline. You will detect documents with incompliant content. For this lab you will do some coding with Postman and Visual Studio. The Azure Portal is also used, to create the Azure Function instance.
 
-In the [Sixth Lab](../../labs/lab-06-bot-business-documents.md) you will learn how to use a Bot to interact with the Azure Search Index, the Business Documents Bot. This lab uses the Bot Emulator and Visual Studio.
+In the [Sixth Lab](../../labs/lab-06-bot-business-documents.md) you will learn how to use a Bot to interact with the Azure Cognitive Search Index, the Business Documents Bot. This lab uses the Bot Emulator and Visual Studio.
 
 In the [Seventh Lab](../../labs/lab-final-case.md) you are invited to, based on what you have learned, create the architecture of a Knowledge Mining solution for another use case. There is also a Hackathon that will challenge your Cognitive Search learnings. A new dataset is provided.
 
@@ -73,17 +73,17 @@ Prices are estimates and are not intended as actual price quotes. Actual prices 
 
 ![Monthly Cost](../../resources/images/sol-arch/cost.png)
 
->Note! Starting December 21, 2018, you will be able to associate a Cognitive Services resource with an Azure Search skillset. This will allow us to start charging for skillset execution. On this date, we will also begin charging for image extraction as part of the document-cracking stage. Text extraction from documents will continue to be offered at no additional cost. The execution of built-in skills will be charged at the existing [Cognitive Services pay-as-you go price](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/). Image extraction pricing will be charged at preview pricing, and is described on the [Azure Search pricing page](https://azure.microsoft.com/en-us/pricing/details/search/). About images: You pay for the images extracted/normalized (even if it is a pdf), and then pay for any built-in skills you call (including OCR). [This](https://docs.microsoft.com/en-us/azure/search/cognitive-search-attach-cognitive-services#example-estimating-the-cost-of-document-cracking-and-enrichment) is an example of how that may work.
+>Note! Starting December 21, 2018, you will be able to associate a Cognitive Services resource with an Azure Cognitive Search skillset. This will allow us to start charging for skillset execution. On this date, we will also begin charging for image extraction as part of the document-cracking stage. Text extraction from documents will continue to be offered at no additional cost. The execution of built-in skills will be charged at the existing [Cognitive Services pay-as-you go price](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/). Image extraction pricing will be charged at preview pricing, and is described on the [Azure Cognitive Search pricing page](https://azure.microsoft.com/en-us/pricing/details/search/). About images: You pay for the images extracted/normalized (even if it is a pdf), and then pay for any built-in skills you call (including OCR). [This](https://docs.microsoft.com/en-us/azure/search/cognitive-search-attach-cognitive-services#example-estimating-the-cost-of-document-cracking-and-enrichment) is an example of how that may work.
 
 ## Information Delivery - A Bot as User Interface
 
-Microsoft Azure Search provides an API for web or mobile applications, creating great search experiences for users. Another type of application that can benefit from Azure Search is a Bot, a trending technology from Microsoft.
+Microsoft Azure Cognitive Search provides an API for web or mobile applications, creating great search experiences for users. Another type of application that can benefit from Azure Cognitive Search is a Bot, a trending technology from Microsoft.
 
-Although this is not a training on bots, you will learn how to integrate one with the  [Azure Search Rest API](https://docs.microsoft.com/en-us/azure/search/search-query-rest-api). This Bot will be as simple as possible, running locally with the [Bot Emulator](https://github.com/Microsoft/BotFramework-Emulator).
+Although this is not a training on bots, you will learn how to integrate one with the  [Azure Cognitive Search Rest API](https://docs.microsoft.com/en-us/azure/search/search-query-rest-api). This Bot will be as simple as possible, running locally with the [Bot Emulator](https://github.com/Microsoft/BotFramework-Emulator).
 
 This [gif](../../resources/images/lab-bot/retrieving-cognitive-attrributes.gif) has the expected finished solution, but with a different dataset. Now you have idea of what we will be created by the end of the training.
 
-The Microsoft Learn AI Team has a 2 day [Computer Vision Bot Bootcamp](https://github.com/Azure/LearnAI-Bootcamp) that shows you how to create an intelligent bot using Azure Search, CosmosDB and Cognitive Services.
+The Microsoft Learn AI Team has a 2 day [Computer Vision Bot Bootcamp](https://github.com/Azure/LearnAI-Bootcamp) that shows you how to create an intelligent bot using Azure Cognitive Search, CosmosDB and Cognitive Services.
 
 ## Lab Tools for APIs
 

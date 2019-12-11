@@ -424,19 +424,19 @@
 	],
 	"variable": [
 		{
-			"id": "477eb245-7d78-44ba-94e4-eda616255d91",
+			"id": "e9eeef9c-2202-4ebb-a347-4a3f6c2b9f8a",
 			"key": "searchName",
 			"value": "cjglearnai",
 			"type": "string"
 		},
 		{
-			"id": "b02cd804-7491-4881-a88b-50ff34cdfba2",
+			"id": "85928af3-481c-49df-8a0e-57b676e49609",
 			"key": "apiKey",
 			"value": "AC254C66CED58D428241493CC6554D35",
 			"type": "string"
 		},
 		{
-			"id": "e92f9e53-7e32-4ce6-9e9d-d1fbe6494dab",
+			"id": "dbc4ada8-90fa-4e21-93f1-358bec2d9c46",
 			"key": "cogsKey",
 			"value": "d0229f22dcee4da0be194c6205dd7d28",
 			"type": "string"

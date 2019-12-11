@@ -6,7 +6,7 @@
 
 ## Complex Scenarios
 
-Now you are very familiar to 1x1x1x1 scenarios: one dataset, one index, one skillset and one indexer. The diagrams below describe this situation but also complex scenarios of Cognitive Search.
+Now you are very familiar to 1x1x1x1 scenarios: one data set, one index, one skillset and one indexer. The diagrams below describe this situation but also complex scenarios of Cognitive Search.
 
 ### Performance Optimization with Partitioning for Parallel Processing
 
@@ -34,7 +34,7 @@ The diagrams below explain some of the scenarios for Cognitive Search
 + Physically isolate the created metadata
   + Different index properties of the index: facetable, searchable, filterable, etc
 
-1. **Multiple Skisets Scenario**: This scenario is used when you have one of the following situations:
+1. **Multiple Skillsets Scenario**: This scenario is used when you have one of the following situations:
 
    + A Custom Skill that has different update times. So, you don't need to call that API for all of your executions.
    + Your data has multiple updates periods. Example: images are updated in the morning, text documents in the afternoon.
@@ -60,7 +60,7 @@ Using what you've learned throughout the course, develop a potential Cognitive S
 1. Build your solution using one of the complex scenarios listed above. Justify your choice. Presenting another diagram is valid, you can draw freehand or use any software
 1. List of the predefined and custom skills
 1. The skills sequence and how they are integrated
-1. The necessary Azure Search tier for this solution
+1. The necessary Azure Cognitive Search tier for this solution
 1. List other Data & AI Azure services that could improve the search experience, including all labs, experiments, demos, and breaking news you saw in this training. Also including everything you know about Azure, AI, Data Science, and Analytics.
 
 ## Hackathon - Challenge - Optional

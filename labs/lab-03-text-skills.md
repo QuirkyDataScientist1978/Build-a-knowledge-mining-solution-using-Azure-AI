@@ -1,14 +1,14 @@
 # Create a Cognitive Search Enrichment Process with **Text** Skills
 
-In this lab, you will learn the mechanics of programming data enrichment in Azure Search using *cognitive skills*. Cognitive skills are natural language processing (NLP) and image analysis operations that extract text and text representations of an image, detect language, entities, key phrases, and more. The end result is rich additional content in an Azure Search index, created by a cognitive search indexing pipeline.
+In this lab, you will learn the mechanics of programming data enrichment in Azure Cognitive Search using *cognitive skills*. Cognitive skills are natural language processing (NLP) and image analysis operations that extract text and text representations of an image, detect language, entities, key phrases, and more. The end result is rich additional content in an Azure Cognitive Search index, created by a cognitive search indexing pipeline.
 
 **All the links in this lab are extra content for your learning, but you don't need them to perform the required activities.**
 
-In this lab, you will learn how to create a Cognitive Search indexing pipeline that enriches source data in route to an index. The output is a full text searchable index on Azure Search. The image below shows you the 4 objects you will create using API CALLs.
+In this lab, you will learn how to create a Cognitive Search indexing pipeline that enriches source data in route to an index. The output is a full text searchable index on Azure Cognitive Search. The image below shows you the 4 objects you will create using API CALLs.
 
 ![Lab Plan](../resources/images/lab-text-skills/plan.png)
 
-The list of activities you will do, using Azure Search REST APIs, is:
+The list of activities you will do, using Azure Cognitive Search REST APIs, are:
 
 1. Create a data source for the uploaded data.
 1. Create a Cognitive Search Skillset with entity recognition, language detection, text manipulation and key phrase extraction.
@@ -18,7 +18,7 @@ The list of activities you will do, using Azure Search REST APIs, is:
 1. Check the enriched metadata
 1. Query the metadata
 
->**Tip** You can enhance the index with other Azure Search standard capabilities, such as [synonyms](https://docs.microsoft.com/en-us/azure/search/search-synonyms), [scoring profiles](https://docs.microsoft.com/rest/api/searchservice/add-scoring-profiles-to-a-search-index), [analyzers](https://docs.microsoft.com/en-us/rest/api/searchservice/custom-analyzers-in-azure-search), and [filters](https://docs.microsoft.com/en-us/azure/search/search-filters).
+>**Tip** You can enhance the index with other Azure Cognitive Search standard capabilities, such as [synonyms](https://docs.microsoft.com/en-us/azure/search/search-synonyms), [scoring profiles](https://docs.microsoft.com/rest/api/searchservice/add-scoring-profiles-to-a-search-index), [analyzers](https://docs.microsoft.com/en-us/rest/api/searchservice/custom-analyzers-in-azure-search), and [filters](https://docs.microsoft.com/en-us/azure/search/search-filters).
 
 ## General initial Information
 
@@ -28,11 +28,11 @@ The list of activities you will do, using Azure Search REST APIs, is:
 
 ## Step 1 - Create a data source
 
-Now that your services and source files are prepared, you can start assembling the components of your indexing pipeline. We'll begin by creating a [data source object](https://docs.microsoft.com/rest/api/searchservice/create-data-source) that tells Azure Search how to retrieve external source data.  
+Now that your services and source files are prepared, you can start assembling the components of your indexing pipeline. We'll begin by creating a [data source object](https://docs.microsoft.com/rest/api/searchservice/create-data-source) that tells Azure Cognitive Search how to retrieve external source data.  
 
   >**Note** In this step, you will provide detailed steps on where you should define settings in the Postman application so that you can become familiar with it. Later steps will not provide as detailed steps, just parameter information that you will fill into the Postman application. We recommend that you create a new **Collection** (Folder) for each lab and a new **Request** (API CALL command) for each step. And save your work so that you can reuse your commands. You can use "save as" command to reuse one Request from one lab into another lab. This will save you lots of time. Just be careful to don't overwrite previous work.
 
-For this tutorial, you will use Postman to call Azure Search service APIs. Using the **POST** method and **Header** of the Postman application, you will provide the service name and the api-key you used while creating the Azure Search service, and you will define the content-type as JSON. This information is summarized as follows:
+For this tutorial, you will use Postman to call Azure Cognitive Search service APIs. Using the **POST** method and **Header** of the Postman application, you will provide the service name and the api-key you used while creating the Azure Cognitive Search service, and you will define the content-type as JSON. This information is summarized as follows:
 
 ```http
 POST https://[your-service-name].search.windows.net/datasources?api-version=2019-05-06-Preview
@@ -42,24 +42,31 @@ api-key: [admin key]
 
 If you are not so familiar with Postman, perform the following detailed steps to define the POST method and Header settings.
 
->**Note** You can find all of these Postman requests in the finished solutions directory in the collection export called **Azure Search.postman_collection.json**
+>**Note** You can find all of these Postman requests in the finished solutions directory in the collection export **/resources/finished-solutions/03-Text Skills.postman_collection.json**.  These Postman collections use global variables so you only need to update the search service name and keys one time.  You would execute in the following order:
+
+  + Add Datasource (replace the connection string in body)
+  + Add Skillset (replace cogs key in body)
+  + Add Index
+  + Add Indexer
+  + Check Indexer Status
+  + Execute Search
 
 ### Define the POST method
 
 1. Open the [Postman](https://www.getpostman.com/) application. If a dialog box opens, close it down.
 
-1. Click the **New** button, then select **Request**.
+1. Select the **New** button, then select **Request**.
 
-1. For the name, type **Azure Search**
+1. For the name, type **Azure Cognitive Search**
 
-1. For the collection, create a new collection called **Azure Search**, then click **Save to Azure Search**
+1. For the collection, create a new collection called **Azure Cognitive Search**, then select **Save to Azure Cognitive Search**
 
-1. In the new request, for the request type, click on the downward pointing arrow next to **"GET"**, and change it to select **"POST"**.
+1. In the new request, for the request type, select the downward pointing arrow next to **"GET"**, and change it to select **"POST"**.
 
-1. In the text box that shows the words "Enter request url" type in the following information, replacing **[service name]** with the name of the Azure Search service you created:
+1. In the text box that shows the words "Enter request url" type in the following information, replacing **[your service name]** with the name of the Azure Cognitive Search service you created:
       > <https://[your-service-name].search.windows.net/datasources?api-version=2019-05-06-Preview>  
 
-1. Click the **Headers** tab.  On this tab is a table of that has three columns with the titles of KEY, VALUE and DESCRIPTION respectively, and a single row.
+1. Select the **Headers** tab.  On this tab is a table of that has three columns with the titles of KEY, VALUE and DESCRIPTION respectively, and a single row.
 
 1. Under the KEY column, in the first row, type in the following text **"Content-Type"**.
 
@@ -67,9 +74,9 @@ If you are not so familiar with Postman, perform the following detailed steps to
 
 1. Under the KEY column, in the second row, type in the following text **"api-key"**.
 
-1. Under the VALUE column, in the second row, paste in your Azure search key.
+1. Under the VALUE column, in the second row, paste in your Azure Cognitive Search key.
 
-1. Click the **Body** tab.  For the body type, select **Raw**
+1. Select the **Body** tab.  For the body type, select **Raw**
 
 1. In the **Request body**, copy the following:
 
@@ -92,9 +99,9 @@ If you are not so familiar with Postman, perform the following detailed steps to
 
 >**Note** Double check you have used the all connection string, it is very long and sometimes you may have not copied it all.
 
-1. Click **Send**.  The web test tool should return a status code of **201 Created** confirming success.
+1. Select **Send**.  The web test tool should return a status code of **201 Created** confirming success.
 
-1. Switch back to the Azure portal. Confirm the data source was created in Azure Search. On the **Search service dashboard page**, verify the **Data Sources** link has a new item. You might need to wait a few minutes for the portal page to refresh.
+1. Switch back to the Azure portal. Confirm the data source was created in Azure Cognitive Search. On the **Search service dashboard page**, verify the **Data Sources** link has a new item. You might need to wait a few minutes for the portal page to refresh.
 
 > **Tip** If you got a 403 or 404 error, check the request construction: `api-version=2019-05-06` should be on the endpoint, `api-key` should be in the Header after `Content-Type`, and its value must be valid for a search service. You can reuse the header for the remaining steps in this lab.
 
@@ -102,7 +109,7 @@ If you are not so familiar with Postman, perform the following detailed steps to
 
 In this step, you define a set of enrichment steps that you want to apply to your data. Each enrichment step is called a *skill*, and the set of enrichment steps a *skillset*. This tutorial uses the following [predefined cognitive skills](https://docs.microsoft.com/en-us/azure/search/cognitive-search-predefined-skills):
 
-+ [Language Detection](https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-language-detection) to identify the content's language. In December 2018 only English and Spanish are supported for all cognitive skills. For the actual Cognitive Search language list and status, click [here](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/language-support). That's why the provided dataset has documents in these two languages. The Azure Search supported language list is something different, a different universe of options. For more information, click [here](https://docs.microsoft.com/en-us/rest/api/searchservice/Language-support?redirectedfrom=MSDN).
++ [Language Detection](https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-language-detection) to identify the content's language. In December 2018 only English and Spanish are supported for all cognitive skills. For the actual Cognitive Search language list and status, click [here](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/language-support). That's why the provided dataset has documents in these two languages. The Azure Cognitive Search supported language list is something different, a different universe of options. For more information, click [here](https://docs.microsoft.com/en-us/rest/api/searchservice/Language-support?redirectedfrom=MSDN).
 
 + [Text Split](https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-textsplit) to break large content into smaller chunks before calling the key phrase extraction skill. Key phrase extraction accepts inputs of 50,000 characters or less. In December 2018, entity recognition is accepting only 4000, it will be increased to 50,000 characters in the near future. But to make it work with both actual limits, this training labs will use 4000 characters. It is required, the dataset has files much bigger than that.
 
@@ -116,7 +123,7 @@ In this step, you define a set of enrichment steps that you want to apply to you
 
   Reference the skillset name ```demoskillset``` for the rest of this lab.
 
-  1. In the top navigation with tabs of your current requests, click the **+** to create a new request
+  1. In the top navigation with tabs of your current requests, select the **+** to create a new request
 
   1. Change the request type to **PUT**
 
@@ -212,9 +219,9 @@ In this step, you define a set of enrichment steps that you want to apply to you
 
 >**UPDATE** Entity Recognition skill initial types were "Person", "Location" and "Oragnization". Types "Quantity", "Datetime", "URL" and "Email" were added on November 28th, 2018. This means that Entity Recognition Skill can be used 7 times in the same skillset. **But you can't use the same type twice in the same skillset**.
 
-1.  Towards the bottom of the body content, replace the cognitive services key with your service key from your setup lab
+1. Towards the bottom of the body content, replace the cognitive services key with your service key from your setup lab
 
-1. Click **Send**.  The web test tool should return a status code of **201 Created** confirming success.
+1. Select **Send**.  The web test tool should return a status code of **201 Created** confirming success.
 
 #### About the request
 
@@ -222,7 +229,7 @@ Let's take some time to review the request and confirm we understand what's happ
 
 Notice how the key phrase extraction skill is applied for each page. By setting the context to ```"document/pages/*"``` you run this enricher for each member of the document/pages array (for each page in the document).
 
-Each skill executes on the content of the document. During processing, Azure Search cracks each document to read content from different file formats. Found text originating in the source file is placed into a generated ```content``` field, one for each document. As such, set the input as ```"/document/content"```.
+Each skill executes on the content of the document. During processing, Azure Cognitive Search cracks each document to read content from different file formats. Found text originating in the source file is placed into a generated ```content``` field, one for each document. As such, set the input as ```"/document/content"```.
 
 A graphical representation of the skillset you created is shown below.
 
@@ -248,7 +255,7 @@ Before you make this REST call, remember to replace the service name and the adm
 
 This request creates an index. Use the index name ```demoindex``` for the rest of this tutorial.
 
-1. Click the **+** to create a new request
+1. Select the **+** to create a new request
 
 1. Change the request type to **PUT**
 
@@ -313,11 +320,11 @@ This request creates an index. Use the index name ```demoindex``` for the rest o
 }
 ```
 
-1. Click **Send**.  The web test tool should return a status code of **201 Created** confirming success.
+1. Select **Send**.  The web test tool should return a status code of **201 Created** confirming success.
 
-Check the Azure portal to confirm the index was created in Azure Search. On the **Search service dashboard page**, verify the **Indexes** tile has a 2 items. You might need to wait a few minutes for the portal page to refresh. Click on **Indexes** to confirm that the ```demoindex``` appears.
+Check the Azure portal to confirm the index was created in Azure Cognitive Search. On the **Search service dashboard page**, verify the **Indexes** tile has a 2 items. You might need to wait a few minutes for the portal page to refresh. Select **Indexes** to confirm that the ```demoindex``` appears.
 
-Review the request and confirm understanding. If you want to learn more about defining an index, see [Create Index (Azure Search REST API)](https://docs.microsoft.com/rest/api/searchservice/create-index).
+Review the request and confirm understanding. If you want to learn more about defining an index, see [Create Index (Azure Cognitive Search REST API)](https://docs.microsoft.com/rest/api/searchservice/create-index).
 
 ## Step 4 - Create an indexer, map fields, and execute transformations
 
@@ -335,7 +342,7 @@ Before you make this REST call, remember to replace the service name and the adm
 
 Also, provide the name of your indexer. You can reference it as ```demoindexer``` for the rest of this lab.
 
-1. Click the **+** to create a new request
+1. Select the **+** to create a new request
 
 1. Change the request type to **PUT**
 
@@ -394,11 +401,11 @@ Also, provide the name of your indexer. You can reference it as ```demoindexer``
 }
 ```
 
-1. Click **Send**.  The web test tool should return a status code of **201 Created** confirming success.
+1. Select **Send**.  The web test tool should return a status code of **201 Created** confirming success.
 
 Expect this step to take a minute or two to complete. Even though the data set is small, analytical skills are computation-intensive. Some skills, such as image analysis, are long-running.
 
-Check the Azure portal to confirm the index was created in Azure Search. On the **Search service dashboard page**, verify if the **Indexers** tile has 2 indexes (one from your previous lab). You might need to wait a few minutes for the portal page to refresh. Click on **Indexers** to confirm that the ```demoindexer``` appears.
+Check the Azure portal to confirm the index was created in Azure Cognitive Search. On the **Search service dashboard page**, verify if the **Indexers** tile has 2 indexes (one from your previous lab). You might need to wait a few minutes for the portal page to refresh. Select **Indexers** to confirm that the ```demoindexer``` appears.
 
 While it is running, check this detail: The "blob_uri" was defined as the second field of the index. But it is the third mapping in the indexer. It is a good example on how they work independent. You should scroll up to see these two body requests and compare them.
 
@@ -418,7 +425,7 @@ In this preview, ```"generateNormalizedImages"``` is the only valid value for ``
 
 Once the indexer is defined, it runs automatically when you submit the request. Depending on which cognitive skills you defined, indexing can take longer than you expect. To find out whether the indexer is still running, send the following request to check the indexer status.
 
-1. Click the **+** to create a new request
+1. Select the **+** to create a new request
 
 1. Ensure the request type is **GET**
 
@@ -434,11 +441,11 @@ Since the index columns and skillsets are smaller than in the previous lab, you 
 
 ## Step 6 - Verify content
 
-After indexing is finished, run queries that return the contents of individual fields. By default, Azure Search returns the top 50 results. The sample data is small so the default works fine. However, when working with larger data sets, you might need to include parameters in the query string to return more results - you can read [how to page results in Azure Search here](https://docs.microsoft.com/en-us/azure/search/search-pagination-page-layout).
+After indexing is finished, run queries that return the contents of individual fields. By default, Azure Cognitive Search returns the top 50 results. The sample data is small so the default works fine. However, when working with larger data sets, you might need to include parameters in the query string to return more results - you can read [how to page results in Azure Cognitive Search here](https://docs.microsoft.com/en-us/azure/search/search-pagination-page-layout).
 
 As a verification step, query the index for all of the fields.
 
-1. Click the **+** to create a new request
+1. Select the **+** to create a new request
 
 1. Ensure the request type is **GET**
 
@@ -450,7 +457,7 @@ The output is the index schema, with the name, type, and attributes of each fiel
 
 Submit the second query below, to verify the metadata created with AI. Please notice that API calls are case sensitive, so it is mandatory to use exactly the same field names of the index definition.
 
-1. Click the **+** to create a new request
+1. Select the **+** to create a new request
 
 1. Ensure the request type is **GET**
 
@@ -464,7 +471,7 @@ You can use GET or POST, depending on query string complexity and length. For mo
 
 ## Challenge - Knowledge Store
 
-You can try to create a knwoledge store programmatically, using [this](https://docs.microsoft.com/en-us/azure/search/knowledge-store-howto) tutorial. Create a new blob container, don't use that one created in the previous lab, so you can keep both and compare the results.
+You can try to create a knowledge store programmatically, using [this](https://docs.microsoft.com/en-us/azure/search/knowledge-store-howto) tutorial. Create a new blob container, don't use that one created in the previous lab, so you can keep both and compare the results.
 
 ## Next Step
 

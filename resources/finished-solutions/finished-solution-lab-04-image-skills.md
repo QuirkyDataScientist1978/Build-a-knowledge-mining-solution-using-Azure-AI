@@ -2,7 +2,7 @@
 
 Hello!
 
-Here are the body requests for the Image Skills lab. Don't forget to adjust the URLs to use your Azure Search service name.
+Here are the body requests for the Image Skills lab. Don't forget to adjust the URLs to use your Azure Cognitive Search service name.
 
 ## Delete Skillset
 

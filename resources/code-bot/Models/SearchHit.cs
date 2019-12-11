@@ -32,7 +32,11 @@ namespace Models
             {
                 object result = string.Empty;
                 var results = PropertyBag.TryGetValue("needsModeration", out result);
-                return bool.Parse(result.ToString());
+				
+				if (result != null)
+                    return bool.Parse(result.ToString());
+
+                return false;
             }
         }
 

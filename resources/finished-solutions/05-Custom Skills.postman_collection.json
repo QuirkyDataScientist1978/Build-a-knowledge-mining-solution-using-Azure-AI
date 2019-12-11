@@ -390,6 +390,73 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Test Function (Local)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"values\": [\r\n        {\r\n            \"recordId\": \"a1\",\r\n            \"data\":\r\n            {\r\n               \"text\":  \"Email: abcdef@abcd.com, phone: 6657789887, IP: 255.255.255.255, 1 Microsoft Way, Redmond, WA 98052\"\r\n            }\r\n        }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/ContentModerator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"ContentModerator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Function (Remote)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"values\": [\r\n        {\r\n            \"recordId\": \"a1\",\r\n            \"data\":\r\n            {\r\n               \"text\":  \"Email: abcdef@abcd.com, phone: 6657789887, IP: 255.255.255.255, 1 Microsoft Way, Redmond, WA 98052\"\r\n            }\r\n        }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "https://[your-function-url].azurewebsites.net/api/ContentModerator?code=[enter your Azure Functions key here]",
+					"protocol": "https",
+					"host": [
+						"[your-function-url]",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"ContentModerator"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "[enter your Azure Functions key here]"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -416,31 +483,31 @@
 	],
 	"variable": [
 		{
-			"id": "152a5405-87af-4996-9e43-664356bb79cb",
+			"id": "eb8a295b-82f2-40fa-a3d0-893041468280",
 			"key": "serviceName",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "fbb10ea8-893f-4a26-923c-e3f5fcb373a5",
+			"id": "9c8b28e8-0b4c-4d9c-a6c2-a3002d91ca02",
 			"key": "apiKey",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "e0d68232-7731-44ae-8778-0c273e3b0d6e",
+			"id": "a24f3b8a-ed5a-46a6-af1b-2dba9f17f3c9",
 			"key": "cogsKey",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "931c0ee5-bde3-4808-93e1-58062d06324e",
+			"id": "03a062f7-04dd-45fa-b6d3-b3391275cdc2",
 			"key": "functionUrl",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "1e1dcfeb-c707-4536-8c61-3c0dd2267473",
+			"id": "99167043-d724-425a-9854-c53d20e5e4f8",
 			"key": "functionKey",
 			"value": "",
 			"type": "string"

@@ -21,7 +21,7 @@ Use the KMB-Opening.pptx presentation to:
 
 While the introduction has a pdf version, this one won't have one. The idea is to keep on editing this presentation for each delivery.
 
-## Azure Search LAB
+## Azure Cognitive Search LAB
 
 Open the page <https://alice.unearth.ai/> to show how important is the Analyzer definition. This page shows the different results you can get from Standard Lucene, English Lucene and English Microsoft. Search for:
 
@@ -45,7 +45,7 @@ Open the page <https://alice.unearth.ai/> to show how important is the Analyzer 
 
 Important to comment in the Azure Functions Code:
 
-1. language: eng (Content Moderator) x en (Azure Search)
+1. language: eng (Content Moderator) x en (Azure Cognitive Search)
 1. For now, language is not dynamic (not using the document extracted language). So, we are not moderating spanish docs very well.
 1. 1024 limit.
 1. host x region. Without and with https
