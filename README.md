@@ -15,8 +15,6 @@ To learn more about AI and Knowledge Mining, check this resources:
 
 Thank you for the visit!
 
-## Build an Azure Cognitive Search Solution for business documents using Microsoft AI Platform
-
 ## About this course
 
 In this course, you will create an enterprise search solution by applying knowledge mining to business documents like contracts, memos, presentations and images.
