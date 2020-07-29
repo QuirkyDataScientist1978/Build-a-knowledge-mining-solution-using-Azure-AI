@@ -1,8 +1,6 @@
-# Knowledge Mining
+# LearnAI Team - Knowledge Mining Bootcamp
 
 ![Logo](./resources/images/readme/header.png)
-
-## Knowledge Mining Bootcamp - Build an Azure Cognitive Search Solution for business documents using Microsoft AI Platform
 
 ## IMPORTANT MESSAGE - CONTENT RETIREMENT NOTICE
 
@@ -16,6 +14,8 @@ To learn more about AI and Knowledge Mining, check this resources:
 + Microsoft AI Customer Engineering Team Blog - http://aka.ms/ACE-Blog
 
 Thank you for the visit!
+
+## Build an Azure Cognitive Search Solution for business documents using Microsoft AI Platform
 
 ## About this course
 
