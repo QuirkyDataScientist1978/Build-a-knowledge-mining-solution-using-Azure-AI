@@ -105,11 +105,9 @@ Full Course classroom training:  16 hours
 
 3. [Lab 1](./labs/Lab-01-Environment-Creation-and-Indexing-Blob-Storage.pdf) - **Environment Creation and Indexing Blog Storage**
 
-4. [Lab 2](./labs/lab-02-azure-cognitive-search.md) - **Indexing Blob Storage**
+4. [Lab 2](./labs/Lab-02-Text-Skills.pdf) - **Text Skills**
 
-5. [Lab 3](./labs/lab-03-text-skills.md) - **Text Skills**
-
-6. [Lab 4](./labs/lab-04-image-skills.md) – **Image Skills**
+5. [Lab 3](./labs/lab-04-image-skills.md) – **Image Skills**
 
 7. [Lab 5](./labs/lab-05-custom-skills.md) - **Custom Skills**
 
