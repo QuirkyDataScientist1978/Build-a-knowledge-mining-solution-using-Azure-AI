@@ -1,6 +1,6 @@
 # Build a knowledge mining solution using Azure AI
 
-![Logo](./resources/images/readme/header.png)
+![Logo](./resources/images/readme/new-header.png)
 
 For learners using the November 2020 webcast series from the Microsoft US Azure team https://aka.ms/azure-knowledge-mining
 
