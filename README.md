@@ -109,11 +109,11 @@ Full Course classroom training:  16 hours
 
 5. [Lab 3](./labs/Lab-03-Image-Skills.pdf) – **Image Skills**
 
-7. [Lab 5](./labs/lab-05-custom-skills.md) - **Custom Skills**
+6. [Lab 4](./labs/Lab-04-Custom-Skills.pdf) - **Custom Skills**
 
-8. [Lab 6](./labs/lab-06-bot-business-documents.md) - Build and Integrate a **Bot** with the Search API
+7. [Lab 5](./labs/LAb-05-Build-and-integrate-a-bot-with-the-search-API.pdf) - Build and Integrate a **Bot** with the Search API
 
-9. [Lab 7](./labs/lab-final-case.md) - **Architecture Design Session + Hackathon**
+8. [Optional lab](./labs/Optional-Lab-Analyzing-extracted-data-with-PowerBI.pdf) - **Analyzing extracted data with PowerBI**
 
 > **Note**: Once you've completed the labs, we recommend deleting the resource group (and all the resources in it) to avoid incurring extra charges, unless you want to use this solution as a tool for demos and POCs.
 
