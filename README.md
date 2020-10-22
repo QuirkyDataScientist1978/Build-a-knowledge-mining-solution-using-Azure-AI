@@ -103,7 +103,7 @@ Full Course classroom training:  16 hours
 
 2. [Architecture](./resources/md-files/solution-architecture.md) – **Solution Architecture** for building enterprise search solution.
 
-3. [Lab 1](./labs/lab-01-environment-creation.md) - **Environment Creation**
+3. [Lab 1](./labs/Lab-01-Environment-Creation-and-Indexing-Blob-Storage.pdf) - **Environment Creation and Indexing Blog Storage**
 
 4. [Lab 2](./labs/lab-02-azure-cognitive-search.md) - **Indexing Blob Storage**
 
