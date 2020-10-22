@@ -1,26 +1,15 @@
-# LearnAI Team - Knowledge Mining Bootcamp
+# Build a knowledge mining solution using Azure AI
 
 ![Logo](./resources/images/readme/header.png)
 
-## IMPORTANT MESSAGE - CONTENT RETIREMENT NOTICE
+For learners using the November 2020 webcast series from the Microsoft US Azure team https://aka.ms/azure-knowledge-mining
 
-The LearnAI team appreciates your visit, but this training was retired in 2019 and no further maintenance will be done. The team no longer exists and there is no creation of new content. You can use this material as is, no issues or PRs will be considered.
-
-To learn more about AI and Knowledge Mining, check this resources:
-
-+ Microsoft AI School - http://aka.ms/ai-school
-+ Azure Cognigite Search - Knowledge Mining Solution Accelerator - http://aka.ms/kmsolutions
-+ Azure Cognigite Search - Knowledge Mining Workshop - http://aka.ms/kmw1
-+ Microsoft AI Customer Engineering Team Blog - http://aka.ms/ACE-Blog
-
-Thank you for the visit!
+This training is an updated version of the Azure Learn AI Knowledge Mining Bootcamp that has been retired. 
 
 ## About this course
 
 In this course, you will create an enterprise search solution by applying knowledge mining to business documents like contracts, memos, presentations and images.
 You will use Microsoft Azure AI technology to extract insights from unstructured data and expose the results in a Bot interface.
-
-This training is two days long, but you can compress the duration with [alternative agendas](./resources/md-files/alternative-agendas.md).
 
 ## Goals
 
@@ -33,23 +22,21 @@ At the end of this training you will have learned:
 
 The hands-on labs will teach you how to use Microsoft Azure Cognitive Search combined with Microsoft Cognitive Services for entity recognition, image analysis, text translation and indexed search on enterprise business documents. This approach uses Artificial Intelligence to create an advanced search experience.
 
-While this course focuses on Azure Cognitive Search capabilities, an in-depth course on building Bots and integrating various Azure Cognitive Services is available here - [Azure Cognitive Services Bootcamp](https://github.com/Azure/LearnAI-Bootcamp).
-
 In this course we will cover these key concepts:
 
 1. Fundamentals of Azure Cognitive Search and its capabilities
 
-1. Knowledge Mining business scenarios
+2. Knowledge Mining business scenarios
 
-1. Building an enrichment data pipeline for search using predefined and custom skillsets:
+3. Building an enrichment data pipeline for search using predefined and custom skillsets:
 
     + Text skills like entity recognition, language detection, text manipulation and key phrase extraction
     + Image skills like OCR
     + Content moderation skills to detect documents with incompliant content
 
-1. Use the enriched data for an advanced search experience for business documents within an enterprise.
+4. Use the enriched data for an advanced search experience for business documents within an enterprise.
 
-1. Expose the knowledge mining solution using a bot interface for document search and consumption.
+5. Expose the knowledge mining solution using a bot interface for document search and consumption.
 
 ### Architecture
 
@@ -159,7 +146,3 @@ The LearnAI team had intense participation in the creation of the following new 
 ## Cognitive Services Compliance
 
 Click [here](https://azure.microsoft.com/en-us/support/legal/cognitive-services-compliance-and-privacy/) to learn how Microsoft Cognitive Services handle your data.
-
-## Q&A and Survey
-
-Please help the LearnAI Team with [questions and feedback](./resources/md-files/qa-feedback-survey.md) about this training.
