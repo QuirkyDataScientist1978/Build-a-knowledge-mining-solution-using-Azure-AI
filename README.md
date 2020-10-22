@@ -4,7 +4,7 @@
 
 For learners using the November 2020 webcast series from the Microsoft US Azure team https://aka.ms/azure-knowledge-mining
 
-This training is an updated version of the Azure Learn AI Knowledge Mining Bootcamp that has been retired. 
+This training is an updated version of the Azure Learn AI Knowledge Mining Bootcamp that has been retired. The original workshop can be found at https://github.com/Azure/LearnAI-KnowledgeMiningBootcamp
 
 ## About this course
 
