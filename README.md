@@ -107,7 +107,7 @@ Full Course classroom training:  16 hours
 
 4. [Lab 2](./labs/Lab-02-Text-Skills.pdf) - **Text Skills**
 
-5. [Lab 3](./labs/lab-04-image-skills.md) – **Image Skills**
+5. [Lab 3](./labs/Lab-03-Image-Skills.pdf) – **Image Skills**
 
 7. [Lab 5](./labs/lab-05-custom-skills.md) - **Custom Skills**
 
