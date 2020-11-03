@@ -103,7 +103,7 @@ Full Course classroom training:  16 hours
 
 2. [Architecture](./resources/md-files/solution-architecture.md) – **Solution Architecture** for building enterprise search solution.
 
-3. [Prerequisites](./labs/Lab%2000%20-%20Prerequisites.pdf) - **Environtment Creation**
+3. [Prerequisites](./labs/Lab%2000%20-%20Prerequisites.pdf) - **Environment Creation**
 
 3. [Lab 1](./labs/Lab-01-Environment-Creation-and-Indexing-Blob-Storage.pdf) - **Indexing Blog Storage**
 
