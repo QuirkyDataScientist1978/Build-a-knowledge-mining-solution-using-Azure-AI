@@ -113,7 +113,7 @@ Full Course classroom training:  16 hours
 
 6. [Lab 4](./labs/Lab-04-Custom-Skills.pdf) - **Custom Skills**
 
-7. [Lab 5](./labs/LAb-05-Build-and-integrate-a-bot-with-the-search-API.pdf) - Build and Integrate a **Bot** with the Search API
+7. [Lab 5](./labs/Lab-05-Build-and-integrate-a-bot-with-the-search-API.pdf) - Build and Integrate a **Bot** with the Search API
 
 8. [Optional lab](./labs/Optional-Lab-Analyzing-extracted-data-with-PowerBI.pdf) - **Analyzing extracted data with PowerBI**
 
