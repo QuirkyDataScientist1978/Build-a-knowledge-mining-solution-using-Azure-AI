@@ -40,7 +40,7 @@ This Cognitive Search solution addresses these problems, extracting insights fro
 
 In the [First Lab](../../labs/Lab-01-Environment-Creation-and-Indexing-Blob-Storage.pdf) you will learn how index the business documents with "basic" Azure Cognitive Search. The objective is teach how the standard features adds sophisticated search capabilities to your documents: natural language search, ranking, paging, suggestions and so on. This lab will use the Azure Portal only, no coding is required.
 
-In the [Secon Lab](../../labs/Lab-02-Text-Skills.pdf) you will learn the next level of data enrichment, using Cognitive Search. It will be clear for you how AI can **extend** the metadata created, enabling an advanced search experience. In this lab you will do some coding with Postman.
+In the [Second Lab](../../labs/Lab-02-Text-Skills.pdf) you will learn the next level of data enrichment, using Cognitive Search. It will be clear for you how AI can **extend** the metadata created, enabling an advanced search experience. In this lab you will do some coding with Postman.
 
 In the [Third Lab](../../labs/Lab-03-Image-Skills.pdf) you will learn how text skills don't work for images. You will detect and fix this situation, making your images queryable too. For this lab you will do some coding with Postman.
 
