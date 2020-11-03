@@ -99,7 +99,7 @@ Full Course classroom training:  16 hours
 
 ### Course Modules
 
-1. [Introduction](./blob/Build-a-knowledge-mining-solution-using-Azure-AI/Enterprise%20Knowledge%20Mining%20Solution%20Microsoft%20AI%20Platform.pptx) – **Presentation** overview of Azure Cognitive Search, Cognitive Search, business scenarios and industry specific applications.
+1. [Introduction](./Enterprise%20Knowledge%20Mining%20Solution%20Microsoft%20AI%20Platform.pptx) – **Presentation** overview of Azure Cognitive Search, Cognitive Search, business scenarios and industry specific applications.
 
 2. [Architecture](./resources/md-files/solution-architecture.md) – **Solution Architecture** for building enterprise search solution.
 
